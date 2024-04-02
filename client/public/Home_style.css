@@ -1,0 +1,603 @@
+:root {
+    --black: #000000;
+    --dark-gray: #202020;
+    --medium-gray: #777777;
+    --light-gray: #636262;
+    --white: #ffffff;
+    --aqua: aqua;
+    --lime: lime;
+    --magenta: magenta;
+    --yellow: rgb(247, 208, 37);
+    --red: rgb(241, 37, 37);
+    --green: rgb(114, 235, 78);
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 20px;
+  }
+  
+  html, body{
+      height: 100%;
+      width: 100%;
+  }
+  
+    /* scroll bar */
+  
+    ::-webkit-scrollbar {
+      width: 2px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--medium-gray);
+      border-radius: 20px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      border: 1px solid var(--light-gray);
+    }
+  
+  
+  .container000{
+      height: 100%;
+      display: grid;
+      gap: 1rem;
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 500px)); */
+      grid-template-areas: 
+          "header header header"
+          "dashboard occupancy studentupdate"
+          "dashboard complaints emergencybutton"
+      ;
+      background-color: var(--black);
+      grid-template-rows:  0.1fr 1fr 0.5fr; 
+      grid-template-columns: 0.3fr 1fr 0.5fr;  
+      color: white;
+  }
+  
+  .nav-container{
+      background-color: var(--dark-gray);
+      grid-area: header;
+      padding-left: 60px;
+      padding-right: 60px;
+  }
+  
+  .nav-container nav{
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .logo-section{
+      grid-area: logo;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      color: aqua;
+      font-size: 300px;
+  }
+  
+  .logo-section span{
+    padding-left: 10px;
+    padding-top: 15px;
+    font-size: 40px;
+  }
+  
+  .choices-section{
+      grid-area: choices;
+      align-items: end;
+      display: flex;
+  }
+  
+  .choices-section a{
+       text-decoration: none;
+       color: white;
+      margin-left: 100px;
+      padding: 15px 20px 20px 20px;
+      display: flex;   
+      border-radius: 10px 10px 0px 0px;
+  }
+  
+  .choices-section svg{
+    padding-right: 5px;
+  }
+  .profile-section{
+      grid-area: profile;
+      margin-left: 200px;
+      align-items: center;
+      width: 250px;
+  }
+  
+  .profile-section svg{
+    margin-top: 20px;
+    padding-left: 5px;
+    margin-left: 20px;
+  }
+  
+  .nav-container nav ul a{
+      justify-content: space-between;
+      text-decoration: none;
+      color: white;
+  
+  }
+  
+  .nav-container img{
+     height: 50px;
+     padding-top: 5px;
+     position: sticky;
+     border-radius: 40px;
+     margin-top: 10px;
+  }
+  
+  
+  
+  .dashboard{
+      background-color: var(--dark-gray);
+      grid-area: dashboard;
+      border-radius: 15px;
+      margin-left: 10px;
+  }
+  
+  .option-1 a, .option-2 a, .option-3 a, .option-4 a{
+     list-style: none;
+     font-style: none;
+     text-decoration: none;
+     color: white; 
+  }
+  
+  .option-1, .option-2, .option-3, .option-4{
+      padding-left: 26px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid;
+      border-color: black;
+      box-shadow: 0px 0px  8px var(--dark-gray) inset;
+  
+  }
+  
+  .option-1:hover, .option-2:hover, .option-3:hover, .option-4:hover{
+     opacity: 0.3;
+     background-color: black;
+     border-radius: 10px;
+     align-items: center;
+  }
+  
+  .occupancy{
+      background-color: var(--dark-gray);
+      grid-area: occupancy;
+      border-radius: 15px;
+      display: flex;
+      overflow-y: auto;
+      padding-left: 18px;
+      padding-top: 13px;
+      
+  
+      
+  }
+  
+  .occupancy-border{
+      display: flex;
+      overflow-y: auto;
+      gap: 1rem;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding-left: 15px;
+      border: 1px dashed;
+      border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+      box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  }
+  
+  .occupancy a{
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      position: absolute;
+  
+  }
+  
+  .hostel-1{
+      background-color: black;
+      border-radius: 20px;
+      min-width: 320px;
+  
+      height: 230px;
+      margin-top: 25px;
+      padding-top: 15px;
+      padding-left: 15px;
+  }
+  
+  .hostel-2{
+      background-color: black;
+      border-radius: 20px;
+      min-width: 320px;
+  
+      height: 230px;
+      margin-top: 25px;
+      padding-top: 15px;
+      padding-left: 15px;
+  }
+  
+  .hostel-3{
+      background-color: black;
+      border-radius: 20px;
+      min-width: 320px;
+  
+      height: 230px;
+      margin-top: 25px;
+      padding-top: 15px;
+      padding-left: 15px;
+  }
+  
+  .hostel-4{
+      background-color: black;
+      border-radius: 20px;
+      min-width: 320px;
+      height: 230px;
+      margin-top: 25px;
+      padding-top: 15px;
+      padding-left: 15px;
+  }
+  
+  .hostel-5{
+      background-color: black;
+      border-radius: 20px;
+      min-width: 320px;
+  
+      height: 230px;
+      margin-top: 25px;
+      padding-top: 15px;
+      padding-left: 15px;
+   
+  }
+  
+  .hostel-5 .spinner{
+    position: relative;
+    top: 20px;
+  }
+  
+  .complaints{
+      background-color: var(--dark-gray);
+      grid-area: complaints;
+      border-radius: 15px;
+      
+  }
+  
+  .complaints span{
+    position: relative;
+    top: 15px;
+  }
+  .complaints a{
+      text-decoration: none;
+      color: white;
+      /* padding-top: 15px; */
+      padding-left: 15px;
+      position: relative;
+      top: 15px;
+  }
+  
+  .complaints-border{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    border: 1px dashed;
+    border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+    box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  }
+  
+  .occupancy{
+    background-color: var(--dark-gray);
+    grid-area: occupancy;
+    border-radius: 15px;
+    display: flex;
+    overflow-y: auto;
+    padding-left: 18px;
+    padding-top: 13px;  
+  }
+  
+  .occupancy-border{
+    display: flex;
+    overflow-y: auto;
+    gap: 1rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 15px;
+    border: 1px dashed;
+    border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+    box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  }
+  
+  .student-update{
+      /* display: flex; */
+      background-color: var(--dark-gray);
+      grid-area: studentupdate;
+      border-radius: 15px;
+      margin-right: 10px;
+      /* overflow: auto; */
+      overflow-y: hidden;
+      padding-left: 12px;
+      padding-top: 13px;
+      padding-right: 15px;
+  }
+  
+  .student-update a{
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      position: absolute;
+      
+  }
+  
+  .student-update-border{
+      background-color: var(--dark-gray);
+      overflow-y: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 30px;
+      margin-bottom: 12px; 
+      display: flex;  
+      flex-direction: column;
+      max-height: 90%;
+      border: 1px dashed;
+      border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+      box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  }
+  
+  .notifications a{
+      list-style: none;
+      font-style: none;
+      text-decoration: none;
+      color: white;
+   }
+  
+  .notifications{
+      padding-left: 26px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: black;
+      border-radius: 15px;
+      margin-top: 5px;
+      margin-right: 5px;
+      margin-left: 5px;
+  
+  }
+  
+  .notifications img{
+      height: 25px;
+      /* background-color: rgb(1, 27, 25); */
+      border-radius: 40px;
+      padding-right: 20px;
+  }
+  
+  .notifications:hover{
+     opacity: 0.3;
+     background-color: black;
+     border-radius: 10px;
+     align-items: center;
+  }
+  
+  .emergency-button{
+    /* display: flex; */
+    background-color: var(--dark-gray);
+    grid-area: emergencybutton;
+    border-radius: 15px;
+    margin-right: 10px;
+    /* overflow: auto; */
+    overflow-y: hidden;
+    padding-left: 12px;
+    padding-top: 13px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  
+  .emergency-button a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    
+  }
+  
+  .emergency-button-border{
+    background-color: var(--dark-gray);
+    overflow-y: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 12px; 
+    display: flex;  
+    flex-direction: column;
+    max-height: 90%;
+    border: 1px dashed;
+    border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+    box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  }
+  
+  
+   
+   .spinner {
+      display: flex;
+    }
+    
+    .spinner-svg {
+      width: 114px;
+      height: 114px;
+      margin-left: 28%;
+      margin-top: 12%;
+  
+    }
+    
+    .bg {
+      fill: none;
+      stroke-width: 10px;
+      stroke: #1A2C34;
+    }
+    
+    [class^="meter-"] {
+      fill: none;
+      stroke-width: 10px;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+    
+    .meter-1 {
+      stroke-dasharray: 360;
+      stroke-dashoffset: 100;
+      stroke: aqua;
+      animation: progress-1 1s ease-out;
+    }
+    .meter-2 {
+      stroke: lime;
+      stroke-dasharray: 360;
+      stroke-dashoffset: 160;
+      animation: progress-2 .75s ease-out;
+    }
+    .meter-3 {
+      stroke: magenta;
+      stroke-dasharray: 360;
+      stroke-dashoffset: 250;
+      animation: progress-3 .5s ease-out;
+    }
+  
+    .meter-4 {
+      stroke: rgb(247, 208, 37);
+      stroke-dasharray: 360;
+      stroke-dashoffset: 120;
+      animation: progress-4 .5s ease-out;
+    }
+  
+    .meter-5 {
+      stroke: rgb(241, 37, 37);
+      stroke-dasharray: 360;
+      stroke-dashoffset: 270;
+      animation: progress-5 .5s ease-out;
+    }
+    
+    @keyframes progress-1 {
+        from {
+            stroke-dashoffset: 360;
+        }
+        to {
+            stroke-dashoffset: 100;
+        }
+    }
+    
+    @keyframes progress-2 {
+      from {
+        stroke-dashoffset: 360;
+      }
+      to {
+        stroke-dashoffset: 160;
+      }
+    }
+    
+    @keyframes progress-3 {
+      from {
+        stroke-dashoffset: 360;
+      }
+      to {
+        stroke-dashoffset: 250;
+      }
+    }
+  
+    @keyframes progress-4 {
+      from {
+        stroke-dashoffset: 360;
+      }
+      to {
+        stroke-dashoffset: 120;
+      }
+    }
+  
+    @keyframes progress-5 {
+      from {
+        stroke-dashoffset: 360;
+      }
+      to {
+        stroke-dashoffset: 270;
+      }
+    }
+  
+   
+    .progress-bar { 
+      background-color: rgb(208, 250, 21); 
+      width: 80%; 
+      height: 60px;
+      margin-top: 3%;
+      margin-left: 9%;
+    
+    } 
+  
+    .skill { 
+      background-color: rgb(114, 235, 78); 
+      color: white; 
+      padding: 1%; 
+      text-align: right; 
+      font-size: 20px; 
+      height: 60px;
+      color: black;
+      font-weight: bold;
+    } 
+  
+    .html { 
+      width: 80%; 
+    } 
+  
+  
+    .complaints-box{
+      display: flex;
+      justify-content: space-evenly;
+      height: 60px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  
+    }
+  
+    .total-complaints-box{
+      background-color: black;
+      width: 20%;
+    }
+  
+    .total-complaints-box p{
+      padding-top: 5%;
+      padding-left: 5%;
+    }
+  
+    .resolved-box{
+      background-color: black;
+      width: 20%;
+    }
+  
+    .resolved-box p{
+      color: rgb(114, 235, 78);
+      padding-top: 5%;
+      padding-left: 5%;
+    }
+  
+    .open-box{
+      background-color: black;
+      width: 20%;
+  
+    }
+  
+    .open-box p{
+      color: rgb(208, 250, 21);
+      padding-top: 5%;
+      padding-left: 5%;
+    }
+  
+    .bi-arrow-up-left-square{
+       height: 10px;
+    }
+  
+  

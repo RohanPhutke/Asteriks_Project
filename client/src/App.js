@@ -45,6 +45,10 @@ const router = createBrowserRouter([
     element: <Login_Admin/>
     
   },
+  {
+    path :"/Home",
+    element:<Home/>
+  }
   
 ]);
 function App() {

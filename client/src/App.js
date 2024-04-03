@@ -11,15 +11,14 @@ import {
 import Login_Student from './pages/Login_Student';
 import Login_Admin from './pages/Login_Admin';
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import "./style.scss"
+const hostelNumbers = [1, 2, 3, 4, 5];
 const Layout = () =>{
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Outlet/>
-      <Footer/>
+      {/* <Footer/> */}
     
     </>
   )
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
     children : [
       {
          path: "/",
-         element: <Home/>
+         
       },
     ]
   },
@@ -46,10 +45,9 @@ const router = createBrowserRouter([
     
   },
   {
-    path :"/Home",
-    element:<Home/>
+    path:"/Home",
+    element : <Home/>
   }
-  
 ]);
 function App() {
   return (

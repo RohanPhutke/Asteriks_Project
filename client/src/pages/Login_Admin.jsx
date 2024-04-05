@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import loginBg from "./login_anand.jpeg";
-
+import styles from "../styles/Loginstyle.module.scss"
 const Login_Admin = () => {
 
 
@@ -22,7 +22,7 @@ const Login_Admin = () => {
         e.preventDefault();
         try{
          await axios.post("/auth/loginadmin",inputs)
-            navigate("/");
+            navigate("/Home");
         }catch(err){
             setError(err.response.data);
         }
@@ -34,9 +34,9 @@ const Login_Admin = () => {
 
     return (
         //             </form> </div>
-        <div className="auth">
-           <div class="login">
-           <img src= {loginBg} alt="login image" className="login__img" />
+        <div className={styles.auth}>
+           <div class={styles.login} >
+           <img src= {loginBg} alt="login imagae" className="login__img" />
 
          <form action="" class="login__form">
             <h1 class="login__title">Admin Login</h1>
@@ -71,7 +71,9 @@ const Login_Admin = () => {
                <a  onClick={handleForget} class="login__forgot">Forgot Password?</a>
             </div>
 
+           
             <button onClick={handleSubmit} type="submit" class="login__button">Login</button>
+     
             {err && <p className="errorTag">{err}</p>}
             {errorForget && <p className="errorForgetTag">{errorForget}</p>}
             <a href="/loginstudent" class="login_student" >Login as student</a>

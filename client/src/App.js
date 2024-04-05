@@ -11,7 +11,7 @@ import {
 import Login_Student from './pages/Login_Student';
 import Login_Admin from './pages/Login_Admin';
 import Home from './pages/Home';
-import "./style.scss"
+// import "./style.scss"
 import RoomAllocation from './pages/Admin_room_all';
 const hostelNumbers = [1, 2, 3, 4, 5];
 const Layout = () =>{

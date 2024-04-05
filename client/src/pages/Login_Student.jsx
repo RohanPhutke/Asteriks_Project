@@ -1,10 +1,12 @@
 import React,{useState} from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+
 import loginBg from "./login-bg.png";
+import styles from "../styles/Loginstyle.module.scss"
 const Login_Student = () => {
 
-
+ 
     const [inputs,setInputs] = useState({
         email :"",
         password : ""
@@ -25,6 +27,7 @@ const Login_Student = () => {
         }catch(err){
             setError(err.response.data);
         }
+  
     }
 
 
@@ -67,7 +70,9 @@ const Login_Student = () => {
                <a href="#" class="login__forgot">Forgot Password?</a>
             </div>
 
-            <button onClick={handleSubmit} type="submit" class="login__button">Login</button>
+           
+ <button onClick={handleSubmit} className="login__button">Login</button>
+
             <a href="/loginadmin" class="login_admin" >Login as admin</a>
             {err && <p className="errorTag">{err}</p>}
 

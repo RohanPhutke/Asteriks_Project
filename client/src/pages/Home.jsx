@@ -4,7 +4,7 @@ import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.p
 import axios from 'axios';
 import HostelComponent from "./Hostel_component";
 import "../components/Navbar";
-
+import "../styles/Home_style.module.css"
 
 const Home = () => {
     
@@ -54,7 +54,7 @@ const Home = () => {
           </svg>
           Dashboard
         </a>
-        <a href="index2.html">
+        <a href="/Roomallocation">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={25}

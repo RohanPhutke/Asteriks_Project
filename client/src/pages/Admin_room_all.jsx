@@ -1,13 +1,12 @@
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 
-
-
+import styles from "../styles/Admin_room_all_style.module.css"
 const RoomAllocation = () => {
 
     return (
 
 <>
-  <div className="room_allocation_container">
+  <div className={styles.room_allocation_container}>
     <div className="nav-container">
       <nav>
         <div className="logo-section">

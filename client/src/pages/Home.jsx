@@ -3,6 +3,7 @@ import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.p
 // import ''
 import axios from 'axios';
 import HostelComponent from "./Hostel_component";
+import "../components/Navbar";
 
 
 const Home = () => {
@@ -209,13 +210,13 @@ const Home = () => {
       </svg>
     </a>
     <div className="occupancy-border">
-    <div className="hostels-container">
+    {/* <div className="hostels-container"> */}
         <HostelComponent hostelNo={1} />
         <HostelComponent hostelNo={2} />
         <HostelComponent hostelNo={3} />
         <HostelComponent hostelNo={4} />
         <HostelComponent hostelNo={5} />
-      </div>
+      {/* </div> */}
     </div>
   </div>
   <div className="complaints">

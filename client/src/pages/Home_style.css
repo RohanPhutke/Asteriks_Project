@@ -193,6 +193,26 @@
       box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
   }
   
+  /* .hostels-container{
+    background-color: red;
+    display: flex;
+    overflow-y: auto;
+    gap: 1rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 15px;
+    border: 1px dashed;
+    border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+    box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  } */
+
+  /* .hostels-container {
+    display: flex;
+ } */
+
   .occupancy a{
       display: inline-block;
       text-decoration: none;

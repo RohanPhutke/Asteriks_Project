@@ -50,24 +50,24 @@ html, body{
         "dashboard complaints emergencybutton"
     ;
     background-color: var(--black);
-    grid-template-rows:  0.1fr 0.5fr 1fr 1fr; 
+    grid-template-rows:  0.1fr 0.1fr 1fr 1fr; 
     grid-template-columns: 0.4fr 1fr 1fr;  
     color: white;
 }
 
-.nav-container{
+.nav_container{
     background-color: var(--dark-gray);
     grid-area: header;
     padding-left: 60px;
     padding-right: 60px;
 }
 
-.nav-container nav{
+.nav_container nav{
     display: flex;
     justify-content: space-between;
 }
 
-.logo-section{
+.logo_section{
     grid-area: logo;
     width: 50px;
     display: flex;
@@ -78,19 +78,19 @@ html, body{
     font-size: 300px;
 }
 
-.logo-section span{
+.logo_section span{
   padding-left: 10px;
   padding-top: 15px;
   font-size: 40px;
 }
 
-.choices-section{
+.choices_section{
     grid-area: choices;
     align-items: end;
     display: flex;
 }
 
-.choices-section a{
+.choices_section a{
      text-decoration: none;
      color: white;
     margin-left: 100px;
@@ -99,30 +99,30 @@ html, body{
     border-radius: 10px 10px 0px 0px;
 }
 
-.choices-section svg{
+.choices_section svg{
   padding-right: 5px;
 }
-.profile-section{
+.profile_section{
     grid-area: profile;
     margin-left: 200px;
     align-items: center;
     width: 250px;
 }
 
-.profile-section svg{
+.profile_section svg{
   margin-top: 20px;
   padding-left: 5px;
   margin-left: 20px;
 }
 
-.nav-container nav ul a{
+.nav_container nav ul a{
     justify-content: space-between;
     text-decoration: none;
     color: white;
 
 }
 
-.nav-container img{
+.nav_container img{
    height: 50px;
    padding-top: 5px;
    position: sticky;
@@ -136,16 +136,17 @@ html, body{
     grid-area: dashboard;
     border-radius: 15px;
     margin-left: 10px;
+    height: 90%;
 }
 
-.option-1 a, .option-2 a, .option-3 a, .option-4 a{
+.option_1 a, .option_2 a, .option_3 a, .option_4 a{
    list-style: none;
    font-style: none;
    text-decoration: none;
    color: white; 
 }
 
-.option-1, .option-2, .option-3, .option-4{
+.option_1, .option_2, .option_3, .option_4{
     padding-left: 26px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -155,9 +156,9 @@ html, body{
 
 }
 
-.option-1:hover, .option-2:hover, .option-3:hover, .option-4:hover{
+.option_1:hover, .option_2:hover, .option_3:hover, .option_4:hover{
    opacity: 0.3;
-   background-color: black;
+   background-color: rgb(36, 6, 6);
    border-radius: 10px;
    align-items: center;
 }
@@ -177,7 +178,7 @@ html, body{
     
 }
 
-.occupancy-border{
+.occupancy_border{
   background-color: var(--dark-gray);
   overflow-y: auto;
   margin-left: 10px;
@@ -222,7 +223,7 @@ html, body{
   position: absolute;
 }
 
-.complaints-border{
+.complaints_border{
   background-color: var(--dark-gray);
   overflow-y: auto;
   margin-left: 10px;
@@ -238,7 +239,7 @@ html, body{
 }
 
 
-.student-update{
+.student_update{
     background-color: var(--dark-gray);
     grid-area: studentupdate;
     border-radius: 15px;
@@ -251,7 +252,7 @@ html, body{
 
 }
 
-.student-update a{
+.student_update a{
     text-decoration: none;
     color: white;
     display: inline-block;
@@ -259,7 +260,7 @@ html, body{
     
 }
 
-.student-update-border{
+.student_update_border{
     background-color: var(--dark-gray);
     overflow-y: auto;
     margin-left: 10px;
@@ -274,7 +275,7 @@ html, body{
     box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
 }
 
-.emergency-button{
+.emergency_button{
   /* display: flex; */
   background-color: var(--dark-gray);
   grid-area: emergencybutton;
@@ -288,7 +289,7 @@ html, body{
   padding-bottom: 20px;
 }
 
-.emergency-button a{
+.emergency_button a{
   text-decoration: none;
   color: white;
   display: inline-block;
@@ -296,7 +297,7 @@ html, body{
   
 }
 
-.emergency-button-border{
+.emergency_button_border{
   background-color: var(--dark-gray);
   overflow-y: auto;
   margin-left: 10px;
@@ -356,7 +357,7 @@ html, body{
   justify-content: space-evenly;
 }
 
-.showcase-seat{
+.showcase_seat{
   background-color: #444451;
   height: 10px;
   width: 20px;
@@ -364,7 +365,7 @@ html, body{
   border-radius: 2px;
 }
 
-.showcase-seat-selected{
+.showcase_seat_selected{
   background-color: #6feaf6;
   height: 10px;
   width: 20px;
@@ -372,7 +373,7 @@ html, body{
   border-radius: 2px;
 }
 
-.showcase-seat-occupied{
+.showcase_seat_occupied{
   background-color: #fff;
   background-color: #444451;
   height: 10px;
@@ -395,8 +396,6 @@ html, body{
   display: flex;
   justify-content: center;
 }
-
-
 
 
 .searchform {

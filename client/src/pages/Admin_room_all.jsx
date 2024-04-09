@@ -327,7 +327,7 @@ const RoomAllocation = () => {
     </div>
     <div className={styles.complaints}>
       <a className={styles.a} href="id123">
-        Boys Hostel 2
+        Boys Hostel 3
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={16}
@@ -460,7 +460,7 @@ const RoomAllocation = () => {
     </div>
     <div className={styles.student_update}>
       <a className={styles.a} href="id123">
-        Boys Hostel 3
+        Boys Hostel 2
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={16}

@@ -207,77 +207,77 @@ const Adminin = () => {
         <div className={styles.occupancy_border}>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>Piyush Priyadarshi</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>Rohan Phutke</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>Avanish Gurjar</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>Aman Raj</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>Anand Raj</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>Saurav Gitte</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>xyz</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>xyz</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>xyz</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>xyz</span>
           </div>
           <div className={styles.notifications}>
             <img
-              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              src={logo}
               alt="IIITA"
             />
             <span>xyz</span>

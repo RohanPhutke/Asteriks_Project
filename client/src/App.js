@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import RoomAllocation from './pages/Admin_room_all';
 import Adminin from './pages/Admin_in';
 import Adminout from './pages/Admin_out';
+import Studenthome from './pages/Student_home';
 const hostelNumbers = [1, 2, 3, 4, 5];
 const Layout = () =>{
   return (
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
   {
     path:"/Adminout",
     element : <Adminout/>
+  },
+
+  {
+    path:"/Studenthome",
+    element : <Studenthome/>
   }
 ]);
 function App() {

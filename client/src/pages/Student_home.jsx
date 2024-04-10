@@ -1,0 +1,262 @@
+import React,{useState,useEffect}  from "react";
+import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
+import "../styles/Student_home.module.css"
+
+const Studenthome = () => {
+    
+    return (
+       
+        <>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style1.css" />
+        <div className="container">
+          <div className="nav-container">
+            <nav>
+              <div className="logo-section">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>HMS</span>
+              </div>
+              <div className="choices-section">
+                <a
+                  href="index1.html"
+                  style={{
+                    boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
+                    backgroundColor: "black"
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={25}
+                    height={25}
+                    fill="currentColor"
+                    className="bi bi-bounding-box"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2zm6 1v2h2v6h-2v2H5v-2H3V5h2V3zm1-2h3v3h-3zm3 11v3h-3v-3zM4 15H1v-3h3zM1 4V1h3v3z" />
+                  </svg>
+                  Dashboard
+                </a>
+                <a href="index2.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={25}
+                    height={25}
+                    fill="currentColor"
+                    className="bi bi-laptop"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                  </svg>
+                  Rooms
+                </a>
+                <a href="index3.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={25}
+                    height={25}
+                    fill="currentColor"
+                    className="bi bi-person-vcard"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5M9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8m1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5" />
+                    <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96q.04-.245.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 1 1 12z" />
+                  </svg>
+                  Attendance
+                </a>
+                <a href="#1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={25}
+                    height={25}
+                    fill="currentColor"
+                    className="bi bi-stopwatch"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z" />
+                    <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3" />
+                  </svg>
+                  Maintenance
+                </a>
+              </div>
+              <div className="profile-section">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={40}
+                  height={40}
+                  fill="currentColor"
+                  className="bi bi-calendar-check"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={40}
+                  height={40}
+                  fill="currentColor"
+                  className="bi bi-person-lines-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={40}
+                  height={40}
+                  fill="currentColor"
+                  className="bi bi-bell-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+                </svg>
+              </div>
+            </nav>
+          </div>
+          <div className="dashboard">
+            <img
+              src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+              alt="IIITA"
+            />
+            <div className="dashboard_content">
+              <span>Name : XYZ</span>
+              <br />
+              <span>Roll No. : 123</span>
+              <br />
+              {/* <span>XYZ</span><br> */}
+              <span>Hostel : BH 1</span>
+              <br />
+              {/* <span>BH 1 </span><br> */}
+              <span>Room No. : 123</span>
+              <br />
+              {/* <span>123</span><br> */}
+              <span>Status : Can't Leave</span>
+              <br />
+              {/* <span>Can't Leave</span><br> */}
+              <span>Due : $ 0</span>
+              <br />
+              {/* <span>$ 0</span><br> */}
+              <span>Care Taker : XYZ</span>
+              <br />
+            </div>
+            <button>Edit Profile</button>
+          </div>
+          <div className="occupancy"></div>
+          <div className="student-update">
+            <a href="id123">
+              Student Update
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={16}
+                height={16}
+                fill="currentColor"
+                className="bi bi-arrow-up-right-square-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
+              </svg>
+            </a>
+            <div className="student-update-border">
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Piyush Priyadarshi</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Rohan Phutke</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Avanish Gurjar</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Aman Raj</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Anand Raj</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Saurav Gitte</span>
+              </div>
+              {/* <div class="notifications"><a href="id4">Saurav Gitte</a></div> */}
+            </div>
+          </div>
+          <div className="emergency-button">
+            <a href="id">
+              Notifications
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={16}
+                height={16}
+                fill="currentColor"
+                className="bi bi-arrow-up-right-square-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
+              </svg>
+            </a>
+            <div className="emergency-button-border">
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Notify 01</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Notify 02</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Notify 03</span>
+              </div>
+              <div className="notifications">
+                <img
+                  src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+                  alt="IIITA"
+                />
+                <span>Notify 04</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+      
+
+    )
+}
+
+export default Studenthome

@@ -1,269 +1,254 @@
 :root {
-    --black: #000000;
-    --dark-gray: #202020;
-    --medium-gray: #777777;
-    --light-gray: #636262;
-    --white: #ffffff;
-    --aqua: aqua;
-    --lime: lime;
-    --magenta: magenta;
-    --yellow: rgb(247, 208, 37);
-    --red: rgb(241, 37, 37);
-    --green: rgb(114, 235, 78);
+  --black: #000000;
+  --dark-gray: #202020;
+  --medium-gray: #777777;
+  --light-gray: #636262;
+  --white: #ffffff;
+  --aqua: aqua;
+  --lime: lime;
+  --magenta: magenta;
+  --yellow: rgb(247, 208, 37);
+  --red: rgb(241, 37, 37);
+  --green: rgb(114, 235, 78);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+  /* scroll bar */
+
+  ::-webkit-scrollbar {
+    width: 2px;
   }
   
-  *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-size: 20px;
+  ::-webkit-scrollbar-track {
+    background: var(--medium-gray);
+    border-radius: 20px;
   }
   
-  html, body{
-      height: 100%;
-      width: 100%;
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 1px solid var(--light-gray);
   }
-  
-    /* scroll bar */
-  
-    ::-webkit-scrollbar {
-      width: 2px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: var(--medium-gray);
-      border-radius: 20px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      border-radius: 20px;
-      border: 1px solid var(--light-gray);
-    }
-  
-  
-  .container{
-      height: 100%;
-      display: grid;
-      gap: 1rem;
-      /* grid-template-columns: repeat(auto-fit, minmax(200px, 500px)); */
-      grid-template-areas: 
-          "header header header"
-          "dashboard occupancy studentupdate"
-          "dashboard occupancy emergencybutton"
-      ;
-      background-color: var(--black);
-      grid-template-rows:  0.1fr 1fr 0.5fr; 
-      grid-template-columns: 0.3fr 1fr 0.5fr;  
-      color: white;
-  }
-  
-  .nav-container{
-      background-color: var(--dark-gray);
-      grid-area: header;
-      padding-left: 60px;
-      padding-right: 60px;
-  }
-  
-  .nav-container nav{
-      display: flex;
-      justify-content: space-between;
-  }
-  
-  .logo-section{
-      grid-area: logo;
-      width: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 10px;
-      color: aqua;
-      font-size: 300px;
-  }
-  
-  .logo-section span{
-    padding-left: 10px;
-    padding-top: 15px;
-    font-size: 40px;
-  }
-  
-  .choices-section{
-      grid-area: choices;
-      align-items: end;
-      display: flex;
-  }
-  
-  .choices-section a{
-       text-decoration: none;
-       color: white;
-      margin-left: 100px;
-      padding: 15px 20px 20px 20px;
-      display: flex;   
-      border-radius: 10px 10px 0px 0px;
-  }
-  
-  .choices-section svg{
-    padding-right: 5px;
-  }
-  .profile-section{
-      grid-area: profile;
-      margin-left: 200px;
-      align-items: center;
-      width: 250px;
-  }
-  
-  .profile-section svg{
-    margin-top: 20px;
-    padding-left: 5px;
-    margin-left: 20px;
-  }
-  
-  .nav-container nav ul a{
-      justify-content: space-between;
-      text-decoration: none;
-      color: white;
-  
-  }
-  
-  .nav-container img{
-     height: 50px;
-     padding-top: 5px;
-     position: sticky;
-     border-radius: 40px;
-     margin-top: 10px;
-  }
-  
-  
-  
-  .dashboard{
-      background-color: var(--dark-gray);
-      grid-area: dashboard;
-      border-radius: 15px;
-      margin-left: 10px;
-  }
-  
-  .dashboard span{
-    display: flex;
-    padding-top: 1px;
-    padding-left: 10px;
-  }
-  
-  .dashboard img{
-    height: 200px;
-    /* position: relative; */
-    margin-left: 10%;
-    margin-top: 10%;
-    border-radius: 100px;
-    background-color: white;
-  }
-  
-  .dashboard button{
-    background-color: aqua;
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    margin-left: 15%;
-    margin-top: 15%;
-  }
-  
-  .dashboard button:hover{
-    opacity: 0.9;
-    /* background-color: black; */
-    border-radius: 10px;
-    /* align-items: center; */
-    cursor: pointer;
-    
-  }
-  
-  .dashboard_content{
-    margin-top: 40px;
-  }
-  
-  
-  
-  .occupancy{
+
+
+.container{
+    height: 100%;
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 500px)); */
+    grid-template-areas: 
+        "header header header"
+        "dashboard occupancy studentupdate"
+        "dashboard occupancy emergencybutton"
+    ;
+    background-color: var(--black);
+    grid-template-rows:  0.1fr 1fr 0.5fr; 
+    grid-template-columns: 0.3fr 1fr 0.5fr;  
+    color: white;
+}
+
+.nav-container{
     background-color: var(--dark-gray);
-    grid-area: occupancy;
-    border-radius: 15px;
+    grid-area: header;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.nav-container nav{
     display: flex;
-    overflow-y: auto;
-    padding-left: 18px;
-    padding-top: 13px;  
-  }
+    justify-content: space-between;
+}
+
+.logo-section{
+    grid-area: logo;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    color: aqua;
+    font-size: 300px;
+}
+
+.logo-section span{
+  padding-left: 10px;
+  padding-top: 15px;
+  font-size: 40px;
+}
+
+.choices-section{
+    grid-area: choices;
+    align-items: end;
+    display: flex;
+}
+
+.choices-section a{
+     text-decoration: none;
+     color: white;
+    margin-left: 100px;
+    padding: 15px 20px 20px 20px;
+    display: flex;   
+    border-radius: 10px 10px 0px 0px;
+}
+
+.choices-section svg{
+  padding-right: 5px;
+}
+.profile-section{
+    grid-area: profile;
+    margin-left: 200px;
+    align-items: center;
+    width: 250px;
+}
+
+.profile-section svg{
+  margin-top: 20px;
+  padding-left: 5px;
+  margin-left: 20px;
+}
+
+.nav-container nav ul a{
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+
+}
+
+.nav-container img{
+   height: 50px;
+   padding-top: 5px;
+   position: sticky;
+   border-radius: 40px;
+   margin-top: 10px;
+}
+
+
+
+.dashboard{
+    background-color: var(--dark-gray);
+    grid-area: dashboard;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.option-1 a, .option-2 a, .option-3 a, .option-4 a{
+ list-style: none;
+ font-style: none;
+ text-decoration: none;
+ color: white; 
+}
+
+.option-1, .option-2, .option-3, .option-4{
+  padding-left: 26px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+  border-color: black;
+  box-shadow: 0px 0px  8px var(--dark-gray) inset;
+
+}
+
+.option-1:hover, .option-2:hover, .option-3:hover, .option-4:hover{
+ opacity: 0.3;
+ background-color: black;
+ border-radius: 10px;
+ align-items: center;
+}
+
+.occupancy span{
+  display: flex;
+  padding-top: 1px;
+  padding-left: 10px;
+}
+
+.occupancy img{
+  height: 200px;
+  /* position: relative; */
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.occupancy_heading button{
+  background-color: aqua;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 88%;
+  /* margin-top: 1%; */
+}
+
+.occupancy_heading{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.occupancy_heading p{
+  position: absolute;
+}
+
+.occupancy_heading:hover{
+  opacity: 0.9;
+  /* background-color: black; */
+  border-radius: 10px;
+  /* align-items: center; */
+  cursor: pointer;
   
-  .student-update{
-      /* display: flex; */
-      background-color: var(--dark-gray);
-      grid-area: studentupdate;
-      border-radius: 15px;
-      margin-right: 10px;
-      /* overflow: auto; */
-      overflow-y: hidden;
-      padding-left: 12px;
-      padding-top: 13px;
-      padding-right: 15px;
-  }
-  
-  .student-update a{
-      text-decoration: none;
-      color: white;
-      display: inline-block;
-      position: absolute;
-      
-  }
-  
-  .student-update-border{
-      background-color: var(--dark-gray);
-      overflow-y: auto;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 30px;
-      margin-bottom: 12px; 
-      display: flex;  
-      flex-direction: column;
-      max-height: 90%;
-      border: 1px dashed;
-      border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
-      box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
-  }
-  
-  .notifications a{
-      list-style: none;
-      font-style: none;
-      text-decoration: none;
-      color: white;
-   }
-  
-  .notifications{
-      padding-left: 26px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      background-color: black;
-      border-radius: 15px;
-      margin-top: 5px;
-      margin-right: 5px;
-      margin-left: 5px;
-  
-  }
-  
-  .notifications img{
-      height: 25px;
-      /* background-color: rgb(1, 27, 25); */
-      border-radius: 40px;
-      padding-right: 20px;
-  }
-  
-  .notifications:hover{
-     opacity: 0.3;
-     background-color: black;
-     border-radius: 10px;
-     align-items: center;
-  }
-  
-  .emergency-button{
+}
+
+.occupancy-border{
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  overflow-y: auto;
+  gap: 1rem;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 15px;
+  border: 1px dashed;
+  border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+  box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+}
+
+.dashboard_content{
+  margin-top: 40px;
+}
+
+
+
+.occupancy{
+  background-color: var(--dark-gray);
+  grid-area: occupancy;
+  border-radius: 15px;
+  /* display: flex; */
+  overflow-y: auto;
+  padding-left: 18px;
+  padding-top: 13px;  
+}
+
+.student-update{
     /* display: flex; */
     background-color: var(--dark-gray);
-    grid-area: emergencybutton;
+    grid-area: studentupdate;
     border-radius: 15px;
     margin-right: 10px;
     /* overflow: auto; */
@@ -271,18 +256,17 @@
     padding-left: 12px;
     padding-top: 13px;
     padding-right: 15px;
-    padding-bottom: 20px;
-  }
-  
-  .emergency-button a{
+}
+
+.student-update a{
     text-decoration: none;
     color: white;
     display: inline-block;
     position: absolute;
     
-  }
-  
-  .emergency-button-border{
+}
+
+.student-update-border{
     background-color: var(--dark-gray);
     overflow-y: auto;
     margin-left: 10px;
@@ -295,6 +279,75 @@
     border: 1px dashed;
     border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
     box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
-  }
+}
+
+.notifications a{
+    list-style: none;
+    font-style: none;
+    text-decoration: none;
+    color: white;
+ }
+
+.notifications{
+    padding-left: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: black;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.notifications img{
+    height: 25px;
+    /* background-color: rgb(1, 27, 25); */
+    border-radius: 40px;
+    padding-right: 20px;
+}
+
+.notifications:hover{
+   opacity: 0.3;
+   background-color: black;
+   border-radius: 10px;
+   align-items: center;
+}
+
+.emergency-button{
+  /* display: flex; */
+  background-color: var(--dark-gray);
+  grid-area: emergencybutton;
+  border-radius: 15px;
+  margin-right: 10px;
+  /* overflow: auto; */
+  overflow-y: hidden;
+  padding-left: 12px;
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+.emergency-button a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: absolute;
   
-  
+}
+
+.emergency-button-border{
+  background-color: var(--dark-gray);
+  overflow-y: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 12px; 
+  display: flex;  
+  flex-direction: column;
+  max-height: 90%;
+  border: 1px dashed;
+  border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+  box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+}
+

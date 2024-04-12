@@ -271,27 +271,27 @@ const Home = () => {
     </a>
     <div className="student-update-border">
       <div className="notifications">
-        {/* <img src={logo} alt="IIIT A" /> */}
+        <img src={logo} alt="IIIT A" />
         <span>Piyush Priyadarshi</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Rohan Phutke</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Avanish Gurjar</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Aman Raj</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Anand Raj</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Saurav Gitte</span>
       </div>
     </div>
@@ -312,19 +312,19 @@ const Home = () => {
     </a>
     <div className="emergency-button-border">
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Notify 01</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Notify 02</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Notify 03</span>
       </div>
       <div className="notifications">
-        <img src="{logo}" alt="IIIT A" />
+        <img src={logo} alt="IIIT A" />
         <span>Notify 04</span>
       </div>
     </div>

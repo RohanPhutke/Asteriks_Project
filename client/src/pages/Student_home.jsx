@@ -1,6 +1,7 @@
 import React,{useState,useEffect}  from "react";
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
-import "../styles/Student_home.module.css"
+
+import styles from "../styles/Student_home.module.css"
 
 const Studenthome = () => {
     
@@ -11,17 +12,17 @@ const Studenthome = () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style1.css" />
-  <div className="container">
-    <div className="nav-container">
+  <div className={styles.container}>
+    <div className={styles.nav_container}>
       <nav>
-        <div className="logo-section">
+        <div className={styles.logo_section}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>HMS</span>
         </div>
-        <div className="choices-section">
+        <div className={styles.choices_section}>
           <a
             href="index1.html"
             style={{
@@ -83,7 +84,7 @@ const Studenthome = () => {
             Maintenance
           </a>
         </div>
-        <div className="profile-section">
+        <div className={styles.profile_section}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={40}
@@ -118,8 +119,8 @@ const Studenthome = () => {
         </div>
       </nav>
     </div>
-    <div className="dashboard">
-      <div className="option-1">
+    <div className={styles.dashboard}>
+      <div className={styles.option_1}>
         <a href="id1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +136,7 @@ const Studenthome = () => {
           Profile
         </a>
       </div>
-      <div className="option-2">
+      <div className={styles.option_2}>
         <a href="id2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +151,7 @@ const Studenthome = () => {
           Occupancy
         </a>
       </div>
-      <div className="option-3">
+      <div className={styles.option_3}>
         <a href="id3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +166,7 @@ const Studenthome = () => {
           Allocation
         </a>
       </div>
-      <div className="option-4">
+      <div className={styles.option_4}>
         <a href="id4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -182,17 +183,17 @@ const Studenthome = () => {
         </a>
       </div>
     </div>
-    <div className="occupancy">
-      <div className="occupancy_heading">
+    <div className={styles.occupancy}>
+      <div className={styles.occupancy_heading}>
         <p>Student Profile</p>
         <button>Edit Profile</button>
       </div>
-      <div className="occupancy-border">
+      <div className={styles.occupancy_border}>
         <img
-          src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+          src={logo}
           alt="IIITA"
         />
-        <div className="dashboard_content">
+        <div className={styles.dashboard_content}>
           <span>Name : XYZ</span>
           <br />
           <span>Roll No. : 123</span>
@@ -210,12 +211,12 @@ const Studenthome = () => {
           <span>Due : $ 0</span>
           <br />
           {/* <span>$ 0</span><br> */}
-          <span>Care Taker : XYZ</span>
+          <span>Care Taker : ABC</span>
           <br />
         </div>
       </div>
     </div>
-    <div className="student-update">
+    <div className={styles.student_update}>
       <a href="id123">
         Student Update
         <svg
@@ -229,53 +230,53 @@ const Studenthome = () => {
           <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
         </svg>
       </a>
-      <div className="student-update-border">
-        <div className="notifications">
+      <div className={styles.student_update_border}>
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Piyush Priyadarshi</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Rohan Phutke</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Avanish Gurjar</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Aman Raj</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Anand Raj</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Saurav Gitte</span>
         </div>
-        {/* <div class="notifications"><a href="id4">Saurav Gitte</a></div> */}
+        {/* <div class={styles.notifications}><a href="id4">Saurav Gitte</a></div> */}
       </div>
     </div>
-    <div className="emergency-button">
+    <div className={styles.emergency_button}>
       <a href="id">
         Notifications
         <svg
@@ -289,31 +290,31 @@ const Studenthome = () => {
           <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
         </svg>
       </a>
-      <div className="emergency-button-border">
-        <div className="notifications">
+      <div className={styles.emergency_button_border}>
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Notify 01</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Notify 02</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Notify 03</span>
         </div>
-        <div className="notifications">
+        <div className={styles.notifications}>
           <img
-            src="Indian_Institute_of_Information_Technology,_Allahabad_Logo.png"
+            src={logo}
             alt="IIITA"
           />
           <span>Notify 04</span>

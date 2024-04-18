@@ -4,7 +4,7 @@ import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.p
 import axios from 'axios';
 import HostelComponent from "./Hostel_component";
 import "../components/Navbar";
-import "../styles/Home_style.module.css"
+import styles from "../styles/Home_style.module.css"
 
 const Home = () => {
     
@@ -96,7 +96,7 @@ const Home = () => {
           Maintenance
         </a>
       </div>
-      <div className="profile-section">
+      <div className={styles.profile_section}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={40}
@@ -131,8 +131,8 @@ const Home = () => {
       </div>
     </nav>
   </div>
-  <div className="dashboard">
-    <div className="option-1">
+  <div className={styles.dashboard}>
+    <div className={styles.option_1}>
       <a href="id1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@ const Home = () => {
         Analytics
       </a>
     </div>
-    <div className="option-2">
+    <div className={styles.option_2}>
       <a href="id2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ const Home = () => {
         Students
       </a>
     </div>
-    <div className="option-3">
+    <div className={styles.option_3}>
       <a href="id3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ const Home = () => {
       </a>
     </div>
   </div>
-  <div className="occupancy">
+  <div className={styles.occupancy}>
     <a href="id2">
       Occupancy
       <svg
@@ -209,7 +209,7 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="occupancy-border">
+    <div className={styles.occupancy_border}>
     {/* <div className="hostels-container"> */}
         <HostelComponent hostelNo={1} />
         <HostelComponent hostelNo={2} />
@@ -219,7 +219,7 @@ const Home = () => {
       {/* </div> */}
     </div>
   </div>
-  <div className="complaints">
+  <div className={styles.complaints}>
     <a href="id">
       Complaints
       <svg
@@ -233,29 +233,29 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="complaints-border">
-      <div className="progress-bar">
-        <div className="skill html">
-          <span className="complaint-progress">{(( complaintProgress.resolvedComplaints )/ complaintProgress.totalComplaints)* 100} %</span>
+    <div className={styles.complaints_border}>
+      <div className={styles.progress_bar}>
+        <div className={`${styles.skill} html`}>
+          <span className={styles.complaint_progress}>{(( complaintProgress.resolvedComplaints )/ complaintProgress.totalComplaints)* 100} %</span>
         </div>
       </div>
-      <div className="complaints-box">
-      <div className="total-complaints-box">
+      <div className={styles.complaints_box}>
+      <div className={styles.total_complaints_box}>
       Total Complaints
       <p>{complaintProgress.totalComplaints}</p>
     </div>
-    <div className="resolved-box">
+    <div className={styles.resolved_box}>
       Resolved
       <p>{complaintProgress.resolvedComplaints}</p>
     </div>
-    <div className="open-box">
+    <div className={styles.open_box}>
       Open
       <p>{complaintProgress.totalComplaints-complaintProgress.resolvedComplaints}</p>
     </div>
       </div>
     </div>
   </div>
-  <div className="student-update">
+  <div className={styles.student_update}>
     <a href="id123">
       Student Update
       <svg
@@ -269,34 +269,34 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="student-update-border">
-      <div className="notifications">
+    <div className={styles.student_update_border}>
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Piyush Priyadarshi</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Rohan Phutke</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Avanish Gurjar</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Aman Raj</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Anand Raj</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Saurav Gitte</span>
       </div>
     </div>
   </div>
-  <div className="emergency-button">
+  <div className={styles.emergency_button}>
     <a href="id">
       Notifications
       <svg
@@ -310,20 +310,20 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="emergency-button-border">
-      <div className="notifications">
+    <div className={styles.emergency_button_border}>
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 01</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 02</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 03</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 04</span>
       </div>

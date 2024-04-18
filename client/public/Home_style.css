@@ -566,6 +566,7 @@
     .total-complaints-box{
       background-color: black;
       width: 20%;
+      height: 80px;
     }
   
     .total-complaints-box p{
@@ -576,6 +577,7 @@
     .resolved-box{
       background-color: black;
       width: 20%;
+      height: 80px;
     }
   
     .resolved-box p{
@@ -587,6 +589,7 @@
     .open-box{
       background-color: black;
       width: 20%;
+      height: 80px;
   
     }
   

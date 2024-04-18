@@ -23,7 +23,7 @@ const Studentroomall = () => {
               <span>HMS</span>
             </div>
             <div className={styles.choices_section0}>
-              <a href="index1.html">
+              <a href="/StudentHome">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -37,7 +37,7 @@ const Studentroomall = () => {
                 Dashboard
               </a>
               <a
-                href="index2.html"
+                href="/Studentroomall"
                 style={{
                   boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
                   backgroundColor: "black"
@@ -121,7 +121,7 @@ const Studentroomall = () => {
         </div>
         <div className={styles.dashboard}>
           <div className={styles.option_1}>
-            <a href="id1">
+            <a href="/Studenthome">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}

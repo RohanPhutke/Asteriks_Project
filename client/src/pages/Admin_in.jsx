@@ -17,7 +17,7 @@ const Adminin = () => {
             <span className={styles.span}>HMS</span>
           </div>
           <div className={styles.choices_section}>
-            <a className={styles.a} href="index1.html">
+            <a className={styles.a} href="/Home">
               <svg 
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
@@ -30,7 +30,7 @@ const Adminin = () => {
               </svg>
               Dashboard
             </a>
-            <a className={styles.a}href="index2.html">
+            <a className={styles.a}href="/Roomallocation">
               <svg 
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
@@ -44,7 +44,7 @@ const Adminin = () => {
               Rooms
             </a>
             <a className={styles.a}
-              href="index3.html"
+              href="/Adminin"
               style={{
                 boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
                 backgroundColor: "black"
@@ -129,7 +129,7 @@ const Adminin = () => {
           </a>
         </div>
         <div className={styles.option_2}>
-          <a className={styles.a} href="index3.html">
+          <a className={styles.a} href="/Adminin">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={16}
@@ -145,7 +145,7 @@ const Adminin = () => {
           </a>
         </div>
         <div className={styles.option_3}>
-          <a className={styles.a} href="index4.html">
+          <a className={styles.a} href="/Adminout">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={16}

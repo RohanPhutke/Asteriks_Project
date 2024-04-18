@@ -26,7 +26,7 @@ const Login_Student = () => {
       e.preventDefault();
       try {
          await axios.post("/auth/loginstudent", inputs)
-         navigate("/");
+         navigate("/Studenthome");
       } catch (err) {
          setError(err.response.data);
       }

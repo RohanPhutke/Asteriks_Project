@@ -110,6 +110,10 @@
       align-items: center;
       width: 250px;
   }
+  .profile_section a{
+      text-decoration: none;
+      color: white;
+  }
   
   .profile_section svg{
     margin-top: 20px;

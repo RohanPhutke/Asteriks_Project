@@ -1,11 +1,54 @@
 import React,{useState,useEffect}  from "react";
 
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
-
+import axios from 'axios';
 import styles from "../styles/Student_home.module.css"
 
+
 const Studenthome = () => {
-    
+
+    const [text, setText] = useState(' On leave');
+    const [isEditing, setIsEditing] = useState(false);
+    const [editedText, setEditedText] = useState('');
+  
+    const handleEditClick = () => {
+      setIsEditing(!isEditing);
+      setEditedText(text); // Reset edited text to current text value when entering edit mode
+    };
+  
+    const handleSaveClick = () => {
+      setText(editedText);
+      setIsEditing(false);
+    };
+  
+    const handleInputChange = (e) => {
+      setEditedText(e.target.value);
+    };
+
+     const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
+     const [email, setEmail] = useState('');
+     useEffect(() => {
+      const storedEmail = localStorage.getItem('loggedInEmail');
+      if (storedEmail) {
+         setEmail(storedEmail);
+      }
+      
+      const fetchInfo = async () => {
+        try{
+          
+          const res_info = await axios.get(`/studenthome?email=${email}`);
+          // console.log(res_info.data);
+          const {studentName,studentHostel,RoomNo,imgPath} = res_info.data;
+           setProgress({name : studentName,hostelName : studentHostel,RoomNo,imagePath:imgPath});
+          //  console.log(resultantInfo.imagePath);
+        }
+        catch(error){
+          console.log(`Error fetching student info for ${email}: `,error);
+        }
+      }
+      fetchInfo();
+     })
+    //  console.log(logo);
     return (
        
       <>
@@ -199,32 +242,47 @@ const Studenthome = () => {
     <div className={styles.occupancy}>
       <div className={styles.occupancy_heading}>
         <p>Student Profile</p>
-        <button>Edit Status</button>
+              <button onClick={handleEditClick}>
+                {isEditing ? 'Cancel' : 'Edit Status'}
+              </button>
+              {isEditing && (
+                <button onClick={handleSaveClick}>Save</button>
+              )}
       </div>
       <div className={styles.occupancy_border}>
         <img
-          src={logo}
+          src={resultantInfo.imagePath}
           alt="IIITA"
         />
         <div className={styles.dashboard_content}>
-          <span>Name : XYZ</span>
+          <span>Name : {resultantInfo.name}</span>
           <br />
-          <span>Roll No. : 123</span>
+          <span>Roll No. : {email.slice(0,email.length - 12)}</span>
           <br />
           {/* <span>XYZ</span><br> */}
-          <span>Hostel : BH 1</span>
+          <span>Hostel : BH {resultantInfo.hostelName}</span>
           <br />
           {/* <span>BH 1 </span><br> */}
-          <span>Room No. : 123</span>
+          <span>Room No. : {resultantInfo.RoomNo}</span>
           <br />
           {/* <span>123</span><br> */}
-          <span>Status : Occupied</span>
+          <span>
+            Status:
+               {isEditing ? (
+                <input
+                  type="text"
+                  value={editedText}
+                  onChange={handleInputChange}
+                />
+              ) : (
+                text
+              )}
+            </span>
           <br />
           {/* <span>Can't Leave</span><br> */}
           <span>Due : $ 0</span>
           <br />
           {/* <span>$ 0</span><br> */}
-          <span>Care Taker : ABC</span>
           <br />
         </div>
       </div>

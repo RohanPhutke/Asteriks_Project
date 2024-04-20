@@ -313,10 +313,9 @@ html, body{
 }
 
 .seat {
-  background-color: #444451;
-  /* background-color: aqua; */
+  background-color: #58586a;
+  
   color: aqua;
-  /* color: #353535; */
   align-items: center;
   display: flex;
   padding-left: 20px;
@@ -329,10 +328,23 @@ html, body{
 
 .seat.selected {
   background-color: #6feaf6;
+  /*When Selected
+  background-color: aqua;
+  color: #353535;
+  */
 }
 
-.seat.occupied {
-  background-color: #fff;
+.seat_occupied {
+  background-color: #254b58;
+  color: aqua;
+  align-items: center;
+  display: flex;
+  padding-left: 20px;
+  height: 50px;
+  width: 70px;
+  margin: 3px;
+  border-radius: 2px;
+ 
 }
 
 .seat:nth-of-type(2) {
@@ -343,14 +355,18 @@ html, body{
   margin-left: 18px;
 }
 
-.seat:not(.occupied):hover {
+.seat:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.seat_occupied:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
 .showcase .seat:not(.occupied):hover {
-  cursor: default;
-  transform: scale(1);
+  cursor: pointer;
+  transform: scale(1.2);
 
 }
 
@@ -365,7 +381,7 @@ html, body{
 }
 
 .showcase_seat{
-  background-color: #444451;
+  background-color: #58586a;
   height: 10px;
   width: 20px;
   margin: 3px;
@@ -381,8 +397,8 @@ html, body{
 }
 
 .showcase_seat_occupied{
-  background-color: #fff;
-  background-color: #444451;
+  /* background-color: #fff; */
+  background-color: #254b58;
   height: 10px;
   width: 20px;
   margin: 3px;

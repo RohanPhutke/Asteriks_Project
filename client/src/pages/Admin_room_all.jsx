@@ -202,7 +202,7 @@ const RoomAllocation = () => {
         <ul className={styles.showcase}>
           <li className={styles.li}>
             <div className={styles.showcase_seat} />
-            <small>N/A</small>
+            <small>Vacant</small>
           </li>
           <li className={styles.li}>
             <div className={styles.showcase_seat_selected} />
@@ -221,8 +221,8 @@ const RoomAllocation = () => {
             <div className={styles.seat}>{103}</div>
             <div className={styles.seat}>{104}</div>
             <div className={styles.seat}>{105}</div>
-            <div className={`${styles.seat} occupied`}>{106}</div>
-            <div className={`${styles.seat} occupied`} >{107}</div>
+            <div className={styles.seat_occupied}>{106}</div>
+            <div className={styles.seat_occupied} >{107}</div>
           </div>
           <div className={styles.row}>
             <div className={styles.seat}>{108}</div>
@@ -232,8 +232,8 @@ const RoomAllocation = () => {
             <div className={styles.seat}>{111}</div>
             <div className={styles.seat}>{112}</div>
             <div className={styles.seat}>{113}</div>
-            <div className={`${styles.seat} occupied`}>{114}</div>
-            <div className={`${styles.seat} occupied`}>{115}</div>
+            <div className={styles.seat_occupied}>{114}</div>
+            <div className={styles.seat_occupied}>{115}</div>
           </div>
           <div className={styles.row}>
             <div className={styles.seat}>{116}</div>

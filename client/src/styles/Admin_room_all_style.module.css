@@ -130,7 +130,29 @@ html, body{
    margin-top: 10px;
 }
 
-
+.lockbtn{
+  background: var(--aqua);
+	background: -moz-linear-gradient(top, var(--aqua) 0%, var(--aqua) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--aqua)), color-stop(100%,var(--aqua)));
+	background: -webkit-linear-gradient(top, var(--aqua) 0%,var(--aqua) 100%);
+	background: -o-linear-gradient(top, var(--aqua) 0%,var(--aqua) 100%);
+	background: -ms-linear-gradient(top, var(--aqua) 0%,var(--aqua) 100%);
+	background: linear-gradient(to bottom, var(--aqua) 0%,var(--aqua) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+	border: none;
+	color:var(--dark-gray);
+	cursor: pointer;
+	font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	padding: 10px;
+	width:76px;
+	box-shadow: 0 0 2px var(--aqua) inset;
+	-moz-box-shadow: 0 0 2px var(--aqua) inset;
+	-webkit-box-shadow: 0 0 2px var(--aqua) inset;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  font-weight: bold;
+}
 .dashboard{
     background-color: var(--dark-gray);
     grid-area: dashboard;

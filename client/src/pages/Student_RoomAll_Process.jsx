@@ -43,7 +43,7 @@ const Studentroomallprocess = () => {
           }          else {
           divs.push(
             <div key={i} className={styles.notifications}>
-              <p>`{i+1}`</p>
+              <p>{i+2}</p>
               <div>IIT2022051</div>
               <div>IT</div>
               <div>Piyush Priyadarshi</div>
@@ -78,7 +78,7 @@ const Studentroomallprocess = () => {
           }          else {
           divs.push(
             <div key={i} className={styles.notifications}>
-              <p>3</p>
+              <p>{i+2}</p>
               <div>IIT2022051</div>
               <div>IT</div>
               <div>Piyush Priyadarshi</div>

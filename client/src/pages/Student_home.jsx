@@ -1,4 +1,4 @@
-import React,{useState,useEffect}  from "react";
+import React, { useState, useEffect } from "react";
 
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 import axios from 'axios';
@@ -7,23 +7,23 @@ import styles from "../styles/Student_home.module.css"
 
 const Studenthome = () => {
 
-    const [text, setText] = useState(' On leave');
-    const [isEditing, setIsEditing] = useState(false);
-    const [editedText, setEditedText] = useState('');
-  
-    const handleEditClick = () => {
-      setIsEditing(!isEditing);
-      setEditedText(text); // Reset edited text to current text value when entering edit mode
-    };
-  
-    const handleSaveClick = () => {
-      setText(editedText);
-      setIsEditing(false);
-    };
-  
-    const handleInputChange = (e) => {
-      setEditedText(e.target.value);
-    };
+  const [text, setText] = useState(' On leave');
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedText, setEditedText] = useState('');
+
+  const handleEditClick = () => {
+    setIsEditing(!isEditing);
+    setEditedText(text); // Reset edited text to current text value when entering edit mode
+  };
+
+  const handleSaveClick = () => {
+    setText(editedText);
+    setIsEditing(false);
+  };
+
+  const handleInputChange = (e) => {
+    setEditedText(e.target.value);
+  };
 
      const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
      const [email, setEmail] = useState('');
@@ -398,7 +398,7 @@ const Studenthome = () => {
 </>
 
 
-    )
+  )
 }
 
 export default Studenthome

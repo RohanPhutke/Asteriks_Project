@@ -331,7 +331,7 @@
     gap: 1rem;
     margin-right: 5px;
     margin-bottom: 10px;
-    margin-top: 25px;
+    margin-top: 35px;
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 15px;
@@ -361,7 +361,7 @@
       
   }
   
-  .student_updateborder{
+  .student_update_border{
       background-color: var(--dark-gray);
       overflow-y: auto;
       margin-left: 10px;
@@ -590,6 +590,7 @@
     .total_complaints_box{
       background-color: black;
       width: 20%;
+      height: 80px;
     }
   
     .total_complaints_box p{
@@ -600,6 +601,7 @@
     .resolved_box{
       background-color: black;
       width: 20%;
+      height: 80px;
     }
   
     .resolved_box p{
@@ -611,7 +613,7 @@
     .open_box{
       background-color: black;
       width: 20%;
-  
+      height: 80px;
     }
   
     .open_box p{

@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --black: #000000;
+  --dark-gray: #202020;
+  --medium-gray: #777777;
+  --light-gray: #636262;
+  --white: #ffffff;
+  --aqua: aqua;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+  /* scroll bar */
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--medium-gray);
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 1px solid var(--light-gray);
+  }
+
+
+.container{
+    height: 100%;
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 500px)); */
+    grid-template-areas: 
+        "header header header"
+        /* "dashboard filter filter" */
+        "dashboard occupancy occupancy"
+        "dashboard occupancy occupancy"
+    ;
+    background-color: var(--black);
+    grid-template-rows:  0.1fr 0.5fr 1fr; 
+    grid-template-columns: 0.4fr 1fr 1fr;  
+    color: white;
+}
+
+.nav-container{
+    background-color: var(--dark-gray);
+    grid-area: header;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.nav-container nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-section{
+    grid-area: logo;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    color: aqua;
+    font-size: 300px;
+}
+
+.logo-section span{
+  padding-left: 10px;
+  padding-top: 15px;
+  font-size: 40px;
+}
+
+.choices-section{
+    grid-area: choices;
+    align-items: end;
+    display: flex;
+}
+
+.choices-section a{
+     text-decoration: none;
+     color: white;
+    margin-left: 100px;
+    padding: 15px 20px 20px 20px;
+    display: flex;   
+    border-radius: 10px 10px 0px 0px;
+}
+
+.choices-section svg{
+  padding-right: 5px;
+}
+.profile-section{
+    grid-area: profile;
+    margin-left: 200px;
+    align-items: center;
+    width: 250px;
+}
+
+.profile-section svg{
+  margin-top: 20px;
+  padding-left: 5px;
+  margin-left: 20px;
+}
+
+.nav-container nav ul a{
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+
+}
+
+.nav-container img{
+   height: 50px;
+   padding-top: 5px;
+   position: sticky;
+   border-radius: 40px;
+   margin-top: 10px;
+}
+
+
+.dashboard{
+    background-color: var(--dark-gray);
+    grid-area: dashboard;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.option-1 a, .option-2 a, .option-3 a, .option-4 a{
+   list-style: none;
+   font-style: none;
+   text-decoration: none;
+   color: white; 
+}
+
+.option-1, .option-2, .option-3, .option-4{
+    padding-left: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+    border-color: black;
+    box-shadow: 0px 0px  8px var(--dark-gray) inset;
+
+}
+
+.option-1:hover, .option-2:hover, .option-3:hover, .option-4:hover{
+   opacity: 0.3;
+   background-color: black;
+   border-radius: 10px;
+   align-items: center;
+}
+
+.occupancy{
+    background-color: var(--dark-gray);
+    grid-area: occupancy;
+    border-radius: 15px;
+    margin-right: 10px;
+    overflow-y: hidden;
+    padding-left: 12px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    
+}
+
+.occupancy-border{
+  background-color: var(--dark-gray);
+  overflow-y: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 12px; 
+  display: flex;  
+  flex-direction: column;
+  max-height: 90%;
+  border: 1px dashed;
+  border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+  box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+
+}
+
+.occupancy-border button{
+  background-color: aqua;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.occupancy-border p{
+  background-color: #181818;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.notifications-heading{
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  margin-top: 60px;
+  border: 1px dashed;
+  border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+  box-shadow: 2px 2px 8px rgb(15, 15, 15) inset;
+}
+
+.notifications-heading span{
+  position: relative;
+  left: 10px;
+  color: aqua;
+}
+
+.notifications-heading button{
+  opacity: 0;
+}
+
+.notifications-heading p{
+  opacity: 0;
+}
+
+.occupancy a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+}
+
+
+.notifications a{
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.notifications{
+  padding-left: 26px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: black;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  justify-content: space-around;
+  display: flex;
+
+}
+
+.notifications span{
+  color: rgb(255, 255, 255);
+}
+
+
+
+.notifications:hover{
+ opacity: 0.6;
+ background-color: black;
+ border-radius: 10px;
+ align-items: center;
+}
+
+.notifications button:hover{
+  cursor: pointer;
+}
+
+.notifications1 a{
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.notifications1{
+  padding-left: 26px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: black;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* justify-content: space-around; */
+  display: flex;
+
+}
+
+.notifications1 p{
+  margin-left: 4%;
+}
+
+.notifications1:hover{
+  opacity: 0.3;
+  background-color: black;
+  border-radius: 10px;
+  align-items: center;
+ }
+
+.export-data{
+  background-color: aqua;
+  position: relative;
+  left: 90%;
+  top: 0.1%;
+  height: 50px;
+  width: 150px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.export-data svg{
+   position: relative;
+   top: 3px;
+   stroke: #ffffff;
+}
+
+.inputbox1{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  color: white;
+}
+
+.inputbox2{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  color: white;
+}
+
+.inputbox3{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 180px;
+  color: white;
+}

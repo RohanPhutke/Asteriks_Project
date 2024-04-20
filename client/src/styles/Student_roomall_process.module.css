@@ -330,3 +330,27 @@ html, body{
    top: 3px;
    stroke: #ffffff;
 }
+
+.inputbox1{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  color: white;
+}
+
+.inputbox2{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  color: white;
+}
+
+.inputbox3{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 180px;
+  color: white;
+}

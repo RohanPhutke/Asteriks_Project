@@ -1,8 +1,138 @@
 import React, { useState, useEffect } from "react";
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 import styles from "../styles/Student_roomall_process.module.css";
-
+import axios from "axios";
 const Studentroomallprocess = () => {
+  
+  const DynamicDivs = ({ num }) => {
+    const generateDivs = () => {
+      const divs = [];
+      if (num === 1) {
+        divs.push(
+          <div key={1} className={styles.notifications}>
+            <p>2</p>
+            <div>IIT2022051</div>
+            <div>IT</div>
+            <div>Piyush Priyadarshi</div>
+            <div>{selectedRooms[0].hostelNo}</div>
+            <div>Double</div>
+            <div>{selectedRooms[0].roomNumber}</div>
+            <div>
+              <button>+</button>
+            </div>
+          </div>
+        );
+      } else if (num === 2) {
+        for (let i = 0; i < 3; i++) {
+          if(i==0){
+            divs.push(
+              <div key={i} className={styles.notifications}>
+                <p>2</p>
+                <div>IIT2022051</div>
+                <div>IT</div>
+                <div>Piyush Priyadarshi</div>
+                <div>{selectedRooms[0].hostelNo}</div>
+                <div>Double</div>
+                <div>{selectedRooms[0].roomNumber}</div>
+                <div>
+                  <button>+</button>
+                </div>
+              </div>
+            );
+  
+          }          else {
+          divs.push(
+            <div key={i} className={styles.notifications}>
+              <p>`{i+1}`</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>{selectedRooms[1].hostelNo}</div>
+              <div>Double</div>
+              <div>{selectedRooms[1].roomNumber}</div>
+              <div>
+                <button>+</button>
+              </div>
+            </div>
+          );
+        }
+        }
+      } else if (num === 3) {
+        for (let i = 0; i < 5; i++) {
+          if(i==0){
+            divs.push(
+              <div key={i} className={styles.notifications}>
+                <p>2</p>
+                <div>IIT2022051</div>
+                <div>IT</div>
+                <div>Piyush Priyadarshi</div>
+                <div>{selectedRooms[0].hostelNo}</div>
+                <div>Double</div>
+                <div>{selectedRooms[0].roomNumber}</div>
+                <div>
+                  <button>+</button>
+                </div>
+              </div>
+            );
+  
+          }          else {
+          divs.push(
+            <div key={i} className={styles.notifications}>
+              <p>3</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              {(i>2) && <div>{selectedRooms[2].hostelNo}</div>}
+              {(i<=2) && <div>{selectedRooms[1].hostelNo}</div>}
+              <div>Double</div>
+              {(i>2) && <div>{selectedRooms[2].roomNumber}</div>}
+              {(i<=2) && <div>{selectedRooms[1].roomNumber}</div>}
+              <div>
+                <button>+</button>
+              </div>
+            </div>
+          );
+        }
+        }
+      }
+      return divs;
+    };
+  
+    return <>{generateDivs()}</>;
+  };
+
+  const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
+     const [email, setEmail] = useState('');
+     useEffect(() => {
+      const storedEmail = localStorage.getItem('loggedInEmail');
+      if (storedEmail) {
+         setEmail(storedEmail);
+      }
+      
+      const fetchInfo = async () => {
+        try{
+          
+          const res_info = await axios.get(`/studenthome?email=${email}`);
+          // console.log(res_info.data);
+          const {studentName,studentHostel,RoomNo,imgPath} = res_info.data;
+           setProgress({name : studentName,hostelName : studentHostel,RoomNo,imagePath:imgPath});
+          //  console.log(resultantInfo.imagePath);
+        }
+        catch(error){
+          console.log(`Error fetching student info for ${email}: `,error);
+        }
+      }
+      fetchInfo();
+     })
+
+
+
+  const storedSelectedRooms = localStorage.getItem('lockedRooms');
+  const selectedRooms = storedSelectedRooms ? JSON.parse(storedSelectedRooms) : [];
+  const nums = selectedRooms.length;
+ console.log(selectedRooms);
+ var rollNo = localStorage.getItem('loggedInEmail');
+ rollNo = rollNo.slice(0,rollNo.length - 12);
 
   return (
 
@@ -22,7 +152,7 @@ const Studentroomallprocess = () => {
               <span>HMS</span>
             </div>
             <div className={styles.choices_section}>
-              <a href="index1.html">
+              <a href="/Studenthome">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -36,7 +166,7 @@ const Studentroomallprocess = () => {
                 Dashboard
               </a>
               <a
-                href="index2.html"
+                href="/Roomallocation"
                 style={{
                   boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
                   backgroundColor: "black"
@@ -120,7 +250,7 @@ const Studentroomallprocess = () => {
         </div>
         <div className={styles.dashboard}>
           <div className={styles.option_1}>
-            <a href="id1">
+            <a href="/Studenthome">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
@@ -151,7 +281,7 @@ const Studentroomallprocess = () => {
             </a>
           </div>
           <div className={styles.option_3}>
-            <a href="index4.html">
+            <a href="/Roomallocation">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
@@ -213,91 +343,20 @@ const Studentroomallprocess = () => {
             </div>
           </div>
           <div className={styles.occupancy_border}>
-            <div className={styles.notifications}>
-              <p>2</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>2</div>
-              <div>Double</div>
-              <div>123</div>
-              <div><button>+</button></div>
+          <div key={1} className={styles.notifications}>
+            <p>1</p>
+            <div>{rollNo.toUpperCase()}</div>
+            <div>{rollNo.toUpperCase().slice(1,3)}</div>
+            <div>{resultantInfo.name}</div>
+            <div>{selectedRooms[0].hostelNo}</div>
+            <div>Double</div>
+            <div>{selectedRooms[0].roomNumber}</div>
+            <div>
+              <button>+</button>
             </div>
-            <div className={styles.notifications}>
-              <p>2</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>2</div>
-              <div>Double</div>
-              <div>123</div>
-              <div><button>+</button></div>
-            </div>
-            <div className={styles.notifications}>
-              <p>3</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>2</div>
-              <div>Double</div>
-              <div>123</div>
-              <div><button>+</button></div>
-            </div>
-            <div className={styles.notifications}>
-              <p>4</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>2</div>
-              <div>Double</div>
-              <div>123</div>
-              <div><button>+</button></div>
-
-            </div>
-            <div className={styles.notifications}>
-              <p>5</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>2</div>
-              <div>Double</div>
-              <div>123</div>
-              <div><button>+</button></div>
-
-            </div>
-            <div className={styles.notifications}>
-              <p>6</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>2</div>
-              <div>Double</div>
-              <div>123</div>
-              <div><button>+</button></div>
-
-            </div>
-            <div className={styles.notifications}>
-              <p>7</p>
-              <input className={styles.inputbox1} type="text" placeholder="roll no." />
-              <input className={styles.inputbox2} type="text" placeholder="branch" />
-              <input className={styles.inputbox3} type="text" placeholder="name" />
-              <span>1</span>
-              <span>Double</span>
-              <span>123</span>
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                  fill="currentColor"
-                  className="bi bi-check-lg"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
-                </svg>
-              </button>
-            </div>
+           </div>
           </div>
+            <DynamicDivs num={nums}/>
           <button className={styles.export_data}>
             Proceed
             <svg

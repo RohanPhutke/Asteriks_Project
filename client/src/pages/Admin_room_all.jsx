@@ -29,7 +29,7 @@ const RoomAllocation = () => {
   };
   const handleLockRooms = () => {
     // Logic to lock selected rooms
-    localStorage.setItem('lockedRooms',selectedRooms);
+    localStorage.setItem('lockedRooms',JSON.stringify(selectedRooms));
     navigate('/Studentroomallprocess');
     // You can perform further actions here, like sending the selected rooms to the server
   };

@@ -136,7 +136,7 @@ html, body{
     grid-area: dashboard;
     border-radius: 15px;
     margin-left: 10px;
-    height: 90%;
+    /* height: 90%; */
 }
 
 .option_1 a, .option_2 a, .option_3 a, .option_4 a{

@@ -149,7 +149,7 @@
   }
   
   .option-1, .option-2, .option-3, .option-4{
-      padding-left: 26px;
+      /* padding-left: 26px; */
       padding-top: 30px;
       padding-bottom: 30px;
       border-bottom: 1px solid;

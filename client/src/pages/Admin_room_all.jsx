@@ -288,10 +288,10 @@ const RoomAllocation = () => {
                 <div className={styles.row}>
                  {renderRooms(1,{start:500,end:503})}
                   
-                  {/* <div className={`${styles.seat} occupied`} />
-            <div className={`${styles.seat} occupied`} /> */}
-                  <div className={`${styles.seat} occupied`}>{504}</div>
-                  <div className={`${styles.seat} occupied`}>{505}</div>
+                  {/* <div className={styles.seat_occupied} />
+            <div className={styles.seat_occupied} /> */}
+                  <div className={styles.seat_occupied}>{504}</div>
+                  <div className={styles.seat_occupied}>{505}</div>
                   {renderRooms(1,{start:506,end:507})}
                 </div>
                 <div className={styles.row}>
@@ -300,45 +300,42 @@ const RoomAllocation = () => {
                   {/* <div className="seat occupied" />
             <div className="seat occupied" />
             <div className="seat occupied" /> */}
-                  <div className={`${styles.seat} occupied`}>{604}</div>
-                  <div className={`${styles.seat} occupied`}>{605}</div>
+                  <div className={styles.seat_occupied}>{604}</div>
+                  <div className={styles.seat_occupied}>{605}</div>
                   {renderRooms(1,{start:606,end:607})}
 
                 </div>
                 <div className={styles.row}>
                 {renderRooms(1,{start:608,end:611})}
-                  <div className={`${styles.seat} occupied`}>{152}</div>
-                  <div className={`${styles.seat} occupied`}>{153}</div>
-                  <div className={`${styles.seat} occupied`}>{154}</div>
-                  <div className={`${styles.seat} occupied`}>{155}</div>
+                  <div className={styles.seat_occupied}>{152}</div>
+                  <div className={styles.seat_occupied}>{153}</div>
+                  <div className={styles.seat_occupied}>{154}</div>
+                  <div className={styles.seat_occupied}>{155}</div>
                 </div>
                 <div className={styles.row}>
                 {renderRooms(1,{start:156,end:159})}
 
-                  <div className={`${styles.seat} occupied`}>{160}</div>
-                  <div className={`${styles.seat} occupied`}>{161}</div>
-                  <div className={`${styles.seat} occupied`}>{162}</div>
+                  <div className={styles.seat_occupied}>{160}</div>
+                  <div className={styles.seat_occupied}>{161}</div>
+                  <div className={styles.seat_occupied}>{162}</div>
                   {renderRooms(1,{start:163,end:163})}
 
                 </div>
                 <div className={styles.row}>
                 {renderRooms(1,{start:164,end:167})}
 
-                  <div className={`${styles.seat} occupied`}>{168}</div>
-                  <div className={`${styles.seat} occupied`}>{169}</div>
-                  <div className={`${styles.seat} occupied`}>{170}</div>
+                  <div className={styles.seat_occupied}>{168}</div>
+                  <div className={styles.seat_occupied}>{169}</div>
+                  <div className={styles.seat_occupied}>{170}</div>
                   {renderRooms(1,{start:171,end:171})}
 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{172}</div>
-                  <div className={styles.seat}>{173}</div>
-                  <div className={styles.seat}>{174}</div>
-                  <div className={styles.seat}>{175}</div>
-                  <div className={`${styles.seat} occupied`}>{176}</div>
-                  <div className={`${styles.seat} occupied`}>{177}</div>
-                  <div className={`${styles.seat} occupied`}>{178}</div>
-                  <div className={styles.seat}>{179}</div>
+                  {renderRooms(1,{start:172,end:175})}
+                  <div className={styles.seat_occupied}>{176}</div>
+                  <div className={styles.seat_occupied}>{177}</div>
+                  <div className={styles.seat_occupied}>{178}</div>
+                  {renderRooms(1,{start:179,end:179})}
                 </div>
               </div>
             </div>
@@ -379,16 +376,16 @@ const RoomAllocation = () => {
               </div>
                 <div className={styles.row}>
                 {renderRooms(3,{start:108,end:110})}
-                  <div className={`${styles.seat} occupied`}>{111}</div>
-                  <div className={`${styles.seat} occupied`}>{112}</div>
+                  <div className={styles.seat_occupied}>{111}</div>
+                  <div className={styles.seat_occupied}>{112}</div>
                   {renderRooms(3,{start:113,end:115})}
 
                 </div>
                 <div className={styles.row}>
                 {renderRooms(3,{start:116,end:121})}
 
-                  <div className={`${styles.seat} occupied`}>{122}</div>
-                  <div className={`${styles.seat} occupied`}>{123}</div>
+                  <div className={styles.seat_occupied}>{122}</div>
+                  <div className={styles.seat_occupied}>{123}</div>
                 </div>
                 <div className={styles.row}>
                 {renderRooms(3,{start:124,end:131})}
@@ -397,59 +394,55 @@ const RoomAllocation = () => {
                 <div className={styles.row}>
                 {renderRooms(3,{start:132,end:134})}
 
-                  <div className={`${styles.seat} occupied`}>{135}</div>
-                  <div className={`${styles.seat} occupied`}>{136}</div>
+                  <div className={styles.seat_occupied}>{135}</div>
+                  <div className={styles.seat_occupied}>{136}</div>
                   {renderRooms(3,{start:137,end:139})}
 
                 </div>
                 <div className={styles.row}>
                 {renderRooms(3,{start:140,end:143})}
 
-                  <div className={`${styles.seat} occupied`}>{144}</div>
-                  <div className={`${styles.seat} occupied`}>{145}</div>
-                  <div className={`${styles.seat} occupied`}>{146}</div>
+                  <div className={styles.seat_occupied}>{144}</div>
+                  <div className={styles.seat_occupied}>{145}</div>
+                  <div className={styles.seat_occupied}>{146}</div>
                   {renderRooms(3,{start:147,end:147})}
 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{148}</div>
-                  <div className={styles.seat}>{149}</div>
-                  <div className={styles.seat}>{150}</div>
-                  <div className={styles.seat}>{151}</div>
-                  <div className={`${styles.seat} occupied`}>{152}</div>
-                  <div className={`${styles.seat} occupied`}>{153}</div>
-                  <div className={`${styles.seat} occupied`}>{154}</div>
-                  <div className={styles.seat}>{155}</div>
+                    {renderRooms(3,{start:148,end:151})}
+                  
+                  <div className={styles.seat_occupied}>{152}</div>
+                  <div className={styles.seat_occupied}>{153}</div>
+                  <div className={styles.seat_occupied}>{154}</div>
+                  {renderRooms(3,{start:155,end:155})}
+                  
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{156}</div>
-                  <div className={styles.seat}>{157}</div>
-                  <div className={styles.seat}>{158}</div>
-                  <div className={styles.seat}>{159}</div>
-                  <div className={`${styles.seat} occupied`}>{160}</div>
-                  <div className={`${styles.seat} occupied`}>{161}</div>
-                  <div className={`${styles.seat} occupied`}>{162}</div>
-                  <div className={styles.seat}>{163}</div>
+                  {renderRooms(3,{start:156,end:159})}
+                 
+                  <div className={styles.seat_occupied}>{160}</div>
+                  <div className={styles.seat_occupied}>{161}</div>
+                  <div className={styles.seat_occupied}>{162}</div>
+                  {renderRooms(3,{start:162,end:162})}
+                 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{164}</div>
-                  <div className={styles.seat}>{165}</div>
-                  <div className={styles.seat}>{166}</div>
-                  <div className={styles.seat}>{167}</div>
-                  <div className={`${styles.seat} occupied`}>{168}</div>
-                  <div className={`${styles.seat} occupied`}>{169}</div>
-                  <div className={`${styles.seat} occupied`}>{170}</div>
-                  <div className={styles.seat}>{171}</div>
+                  {renderRooms(3,{start:164,end:167})}
+                 
+                  <div className={styles.seat_occupied}>{168}</div>
+                  <div className={styles.seat_occupied}>{169}</div>
+                  <div className={styles.seat_occupied}>{170}</div>
+                  {renderRooms(3,{start:171,end:171})}
+                 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{172}</div>
-                  <div className={styles.seat}>{173}</div>
-                  <div className={styles.seat}>{174}</div>
-                  <div className={styles.seat}>{175}</div>
-                  <div className={`${styles.seat} occupied`}>{176}</div>
-                  <div className={`${styles.seat} occupied`}>{177}</div>
-                  <div className={`${styles.seat} occupied`}>{178}</div>
-                  <div className={styles.seat}>{179}</div>
+                  {renderRooms(3,{start:172,end:175})}
+                  
+                  <div className={styles.seat_occupied}>{176}</div>
+                  <div className={styles.seat_occupied}>{177}</div>
+                  <div className={styles.seat_occupied}>{178}</div>
+                  {renderRooms(3,{start:179,end:179})}
+                 
                 </div>
               </div>
             </div>
@@ -486,104 +479,75 @@ const RoomAllocation = () => {
               </ul>
               <div className="vacant-container">
                 <div className={styles.row}>
-                  <div className={styles.seat}>{100}</div>
-                  <div className={styles.seat}>{101}</div>
-                  <div className={styles.seat}>{102}</div>
-                  <div className={styles.seat}>{103}</div>
-                  <div className={styles.seat}>{104}</div>
-                  <div className={styles.seat}>{105}</div>
-                  <div className={styles.seat}>{106}</div>
-                  <div className={styles.seat}>{107}</div>
+                   {renderRooms(2,{start:100,end:107})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{108}</div>
-                  <div className={styles.seat}>{109}</div>
-                  <div className={styles.seat}>{110}</div>
-                  <div className={`${styles.seat} occupied`}>{111}</div>
-                  <div className={`${styles.seat} occupied`}>{112}</div>
-                  <div className={styles.seat}>{113}</div>
-                  <div className={styles.seat}>{114}</div>
-                  <div className={styles.seat}>{115}</div>
+                   {renderRooms(2,{start:108,end:110})}
+                  <div className={styles.seat_occupied}>{111}</div>
+                  <div className={styles.seat_occupied}>{112}</div>
+                    {renderRooms(2,{start:113,end:115})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{116}</div>
-                  <div className={styles.seat}>{117}</div>
-                  <div className={styles.seat}>{118}</div>
-                  <div className={styles.seat}>{119}</div>
-                  <div className={styles.seat}>{120}</div>
-                  <div className={styles.seat}>{121}</div>
-                  <div className={`${styles.seat} occupied`}>{122}</div>
-                  <div className={`${styles.seat} occupied`}>{123}</div>
+                    {renderRooms(2,{start:116,end:121})}
+                  <div className={styles.seat_occupied}>{122}</div>
+                  <div className={styles.seat_occupied}>{123}</div>
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{124}</div>
-                  <div className={styles.seat}>{125}</div>
-                  <div className={styles.seat}>{126}</div>
-                  <div className={styles.seat}>{127}</div>
-                  <div className={styles.seat}>{128}</div>
-                  <div className={styles.seat}>{129}</div>
-                  <div className={styles.seat}>{120}</div>
-                  <div className={styles.seat}>{131}</div>
+                    {renderRooms(2,{start:124,end:131})}
+                 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{132}</div>
-                  <div className={styles.seat}>{133}</div>
-                  <div className={styles.seat}>{134}</div>
-                  <div className={`${styles.seat} occupied`}>{135}</div>
-                  <div className={`${styles.seat} occupied`}>{136}</div>
-                  <div className={styles.seat}>{137}</div>
-                  <div className={styles.seat}>{138}</div>
-                  <div className={styles.seat}>{139}</div>
+                    {renderRooms(2,{start:132,end:134})}
+                  
+                  <div className={styles.seat_occupied}>{135}</div>
+                  <div className={styles.seat_occupied}>{136}</div>
+                    {renderRooms(2,{start:137,end:139})}
+                  
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{140}</div>
-                  <div className={styles.seat}>{141}</div>
-                  <div className={styles.seat}>{142}</div>
-                  <div className={styles.seat}>{143}</div>
-                  <div className={`${styles.seat} occupied`}>{144}</div>
-                  <div className={`${styles.seat} occupied`}>{145}</div>
-                  <div className={`${styles.seat} occupied`}>{146}</div>
-                  <div className={styles.seat}>{147}</div>
+                    {renderRooms(2,{start:140,end:143})}
+                 
+                  <div className={styles.seat_occupied}>{144}</div>
+                  <div className={styles.seat_occupied}>{145}</div>
+                  <div className={styles.seat_occupied}>{146}</div>
+                    {renderRooms(2,{start:147,end:147})}
+                  
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{148}</div>
-                  <div className={styles.seat}>{149}</div>
-                  <div className={styles.seat}>{150}</div>
-                  <div className={styles.seat}>{151}</div>
-                  <div className={`${styles.seat} occupied`}>{152}</div>
-                  <div className={`${styles.seat} occupied`}>{153}</div>
-                  <div className={`${styles.seat} occupied`}>{154}</div>
-                  <div className={styles.seat}>{155}</div>
+                    {renderRooms(2,{start:148,end:151})}
+                  
+                  <div className={styles.seat_occupied}>{152}</div>
+                  <div className={styles.seat_occupied}>{153}</div>
+                  <div className={styles.seat_occupied}>{154}</div>
+                    {renderRooms(2,{start:155,end:155})}
+                 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{156}</div>
-                  <div className={styles.seat}>{157}</div>
-                  <div className={styles.seat}>{158}</div>
-                  <div className={styles.seat}>{159}</div>
-                  <div className={`${styles.seat} occupied`}>{160}</div>
-                  <div className={`${styles.seat} occupied`}>{161}</div>
-                  <div className={`${styles.seat} occupied`}>{162}</div>
-                  <div className={styles.seat}>{163}</div>
+                    {renderRooms(2,{start:156,end:159})}
+                 
+                  <div className={styles.seat_occupied}>{160}</div>
+                  <div className={styles.seat_occupied}>{161}</div>
+                  <div className={styles.seat_occupied}>{162}</div>
+                    {renderRooms(2,{start:163,end:163})}
+                 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{164}</div>
-                  <div className={styles.seat}>{165}</div>
-                  <div className={styles.seat}>{166}</div>
-                  <div className={styles.seat}>{167}</div>
+                    {renderRooms(2,{start:164,end:167})}
+                 
                   <div className={styles.seat_occupied}>{168}</div>
-                  <div className={`${styles.seat} occupied`}>{169}</div>
-                  <div className={`${styles.seat} occupied`}>{170}</div>
-                  <div className={styles.seat}>{171}</div>
+                  <div className={styles.seat_occupied}>{169}</div>
+                  <div className={styles.seat_occupied}>{170}</div>
+                    {renderRooms(2,{start:171,end:171})}
+                 
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{172}</div>
-                  <div className={styles.seat}>{173}</div>
-                  <div className={styles.seat}>{174}</div>
-                  <div className={styles.seat}>{175}</div>
-                  <div className={`${styles.seat} occupied`}>{176}</div>
-                  <div className={`${styles.seat} occupied`}>{177}</div>
-                  <div className={`${styles.seat} occupied`}>{178}</div>
-                  <div className={styles.seat}>{179}</div>
+                    {renderRooms(2,{start:172,end:175})}
+                  
+                  <div className={styles.seat_occupied}>{176}</div>
+                  <div className={styles.seat_occupied}>{177}</div>
+                  <div className={styles.seat_occupied}>{178}</div>
+                    {renderRooms(2,{start:179,end:179})}
+                  
                 </div>
               </div>
             </div>
@@ -620,104 +584,62 @@ const RoomAllocation = () => {
               </ul>
               <div className="vacant-container">
                 <div className={styles.row}>
-                  <div className={styles.seat}>{101}</div>
-                  <div className={styles.seat}>{102}</div>
-                  <div className={styles.seat}>{103}</div>
-                  <div className={styles.seat}>{104}</div>
-                  <div className={styles.seat}>{105}</div>
-                  <div className={styles.seat}>{106}</div>
-                  <div className={styles.seat}>{107}</div>
-                  <div className={styles.seat}>{108}</div>
+                   {renderRooms(4,{start:101,end:108})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{109}</div>
-                  <div className={styles.seat}>{110}</div>
-                  <div className={styles.seat}>{111}</div>
+                   {renderRooms(4,{start:109,end:111})}
                   <div className={styles.seat_occupied}>{112}</div>
                   <div className={styles.seat_occupied}>{113}</div>
-                  <div className={styles.seat}>{114}</div>
-                  <div className={styles.seat}>{115}</div>
-                  <div className={styles.seat}>{116}</div>
+                   {renderRooms(4,{start:114,end:116})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{117}</div>
-                  <div className={styles.seat}>{118}</div>
-                  <div className={styles.seat}>{119}</div>
-                  <div className={styles.seat}>{120}</div>
-                  <div className={styles.seat}>{121}</div>
-                  <div className={styles.seat}>{122}</div>
+                   {renderRooms(4,{start:117,end:122})}
                   <div className={styles.seat_occupied}>{123}</div>
                   <div className={styles.seat_occupied}>{124}</div>
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{125}</div>
-                  <div className={styles.seat}>{126}</div>
-                  <div className={styles.seat}>{127}</div>
-                  <div className={styles.seat}>{128}</div>
-                  <div className={styles.seat}>{129}</div>
-                  <div className={styles.seat}>{130}</div>
-                  <div className={styles.seat}>{131}</div>
-                  <div className={styles.seat}>{132}</div>
+                   {renderRooms(4,{start:125,end:132})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{133}</div>
-                  <div className={styles.seat}>{134}</div>
-                  <div className={styles.seat}>{135}</div>
+                   {renderRooms(4,{start:133,end:135})}
                   <div className={styles.seat_occupied}>{136}</div>
                   <div className={styles.seat_occupied}>{137}</div>
-                  <div className={styles.seat}>{138}</div>
-                  <div className={styles.seat}>{139}</div>
-                  <div className={styles.seat}>{140}</div>
+                   {renderRooms(4,{start:138,end:140})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{141}</div>
-                  <div className={styles.seat}>{142}</div>
-                  <div className={styles.seat}>{143}</div>
-                  <div className={styles.seat}>{144}</div>
+                   {renderRooms(4,{start:141,end:144})}
                   <div className={styles.seat_occupied}>{145}</div>
                   <div className={styles.seat_occupied}>{146}</div>
                   <div className={styles.seat_occupied}>{147}</div>
-                  <div className={styles.seat}>{148}</div>
+                   {renderRooms(4,{start:148,end:148})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{149}</div>
-                  <div className={styles.seat}>{150}</div>
-                  <div className={styles.seat}>{151}</div>
-                  <div className={styles.seat}>{152}</div>
+                   {renderRooms(4,{start:149,end:152})}
                   <div className={styles.seat_occupied}>{153}</div>
                   <div className={styles.seat_occupied}>{154}</div>
                   <div className={styles.seat_occupied}>{155}</div>
-                  <div className={styles.seat}>{156}</div>
+                   {renderRooms(4,{start:156,end:156})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{157}</div>
-                  <div className={styles.seat}>{158}</div>
-                  <div className={styles.seat}>{159}</div>
-                  <div className={styles.seat}>{160}</div>
+                   {renderRooms(3,{start:157,end:160})}
                   <div className={styles.seat_occupied}>{161}</div>
                   <div className={styles.seat_occupied}>{162}</div>
                   <div className={styles.seat_occupied}>{163}</div>
-                  <div className={styles.seat}>{164}</div>
+                   {renderRooms(4,{start:164,end:164})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{165}</div>
-                  <div className={styles.seat}>{166}</div>
-                  <div className={styles.seat}>{167}</div>
-                  <div className={styles.seat}>{168}</div>
+                   {renderRooms(4,{start:165,end:168})}
                   <div className={styles.seat_occupied}>{169}</div>
                   <div className={styles.seat_occupied}>{170}</div>
                   <div className={styles.seat_occupied}>{171}</div>
-                  <div className={styles.seat}>{172}</div>
+                   {renderRooms(4,{start:172,end:172})}
                 </div>
                 <div className={styles.row}>
-                  <div className={styles.seat}>{173}</div>
-                  <div className={styles.seat}>{174}</div>
-                  <div className={styles.seat}>{175}</div>
-                  <div className={styles.seat}>{176}</div>
+                   {renderRooms(4,{start:173,end:176})}
                   <div className={styles.seat_occupied}>{177}</div>
                   <div className={styles.seat_occupied}>{178}</div>
                   <div className={styles.seat_occupied}>{179}</div>
-                  <div className={styles.seat}>{180}</div>
+                   {renderRooms(4,{start:180,end:180})}
                 </div>
               </div>
             </div>

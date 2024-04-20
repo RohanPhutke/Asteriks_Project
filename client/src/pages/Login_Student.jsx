@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-import loginBg from "./login-bg.png";
+import loginBg from "../img/login-bg.png";
 //add Loginstyle.scss
 
 import styles from "../styles/Loginstyle.module.scss";
@@ -14,7 +14,7 @@ const Login_Student = () => {
       email: "",
       password: ""
    })
-
+  console.log("heyeeer",loginBg);
    const [err, setError] = useState(null);
    const navigate = useNavigate();
 
@@ -26,7 +26,8 @@ const Login_Student = () => {
       e.preventDefault();
       try {
          await axios.post("/auth/loginstudent", inputs)
-         navigate("/");
+         localStorage.setItem('loggedInEmail',inputs.email);
+         navigate("/Studenthome");
       } catch (err) {
          setError(err.response.data);
       }

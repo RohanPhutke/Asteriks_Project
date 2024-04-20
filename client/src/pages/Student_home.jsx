@@ -1,10 +1,54 @@
 import React,{useState,useEffect}  from "react";
-import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 
+import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
+import axios from 'axios';
 import styles from "../styles/Student_home.module.css"
 
+
 const Studenthome = () => {
-    
+
+    const [text, setText] = useState(' On leave');
+    const [isEditing, setIsEditing] = useState(false);
+    const [editedText, setEditedText] = useState('');
+  
+    const handleEditClick = () => {
+      setIsEditing(!isEditing);
+      setEditedText(text); // Reset edited text to current text value when entering edit mode
+    };
+  
+    const handleSaveClick = () => {
+      setText(editedText);
+      setIsEditing(false);
+    };
+  
+    const handleInputChange = (e) => {
+      setEditedText(e.target.value);
+    };
+
+     const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
+     const [email, setEmail] = useState('');
+     useEffect(() => {
+      const storedEmail = localStorage.getItem('loggedInEmail');
+      if (storedEmail) {
+         setEmail(storedEmail);
+      }
+      
+      const fetchInfo = async () => {
+        try{
+          
+          const res_info = await axios.get(`/studenthome?email=${email}`);
+          // console.log(res_info.data);
+          const {studentName,studentHostel,RoomNo,imgPath} = res_info.data;
+           setProgress({name : studentName,hostelName : studentHostel,RoomNo,imagePath:imgPath});
+          //  console.log(resultantInfo.imagePath);
+        }
+        catch(error){
+          console.log(`Error fetching student info for ${email}: `,error);
+        }
+      }
+      fetchInfo();
+     })
+    //  console.log(logo);
     return (
        
       <>
@@ -24,7 +68,7 @@ const Studenthome = () => {
         </div>
         <div className={styles.choices_section}>
           <a
-            href="index1.html"
+            href="/Studenthome"
             style={{
               boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
               backgroundColor: "black"
@@ -42,7 +86,7 @@ const Studenthome = () => {
             </svg>
             Dashboard
           </a>
-          <a href="index2.html">
+          <a href="StudentRoomAll">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={25}
@@ -116,12 +160,24 @@ const Studenthome = () => {
           >
             <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
           </svg>
+          <a href="/loginStudent">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width={42} 
+          height={42} 
+          fill="currentColor" 
+          class="bi bi-box-arrow-left" 
+          viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+          </svg>
+         </a>
         </div>
       </nav>
     </div>
     <div className={styles.dashboard}>
       <div className={styles.option_1}>
-        <a href="id1">
+        <a href="/Studenthome">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={16}
@@ -186,32 +242,47 @@ const Studenthome = () => {
     <div className={styles.occupancy}>
       <div className={styles.occupancy_heading}>
         <p>Student Profile</p>
-        <button>Edit Profile</button>
+              <button onClick={handleEditClick}>
+                {isEditing ? 'Cancel' : 'Edit Status'}
+              </button>
+              {isEditing && (
+                <button onClick={handleSaveClick}>Save</button>
+              )}
       </div>
       <div className={styles.occupancy_border}>
         <img
-          src={logo}
+          src={resultantInfo.imagePath}
           alt="IIITA"
         />
         <div className={styles.dashboard_content}>
-          <span>Name : XYZ</span>
+          <span>Name : {resultantInfo.name}</span>
           <br />
-          <span>Roll No. : 123</span>
+          <span>Roll No. : {email.slice(0,email.length - 12)}</span>
           <br />
           {/* <span>XYZ</span><br> */}
-          <span>Hostel : BH 1</span>
+          <span>Hostel : BH {resultantInfo.hostelName}</span>
           <br />
           {/* <span>BH 1 </span><br> */}
-          <span>Room No. : 123</span>
+          <span>Room No. : {resultantInfo.RoomNo}</span>
           <br />
           {/* <span>123</span><br> */}
-          <span>Status : Can't Leave</span>
+          <span>
+            Status:
+               {isEditing ? (
+                <input
+                  type="text"
+                  value={editedText}
+                  onChange={handleInputChange}
+                />
+              ) : (
+                text
+              )}
+            </span>
           <br />
           {/* <span>Can't Leave</span><br> */}
           <span>Due : $ 0</span>
           <br />
           {/* <span>$ 0</span><br> */}
-          <span>Care Taker : ABC</span>
           <br />
         </div>
       </div>

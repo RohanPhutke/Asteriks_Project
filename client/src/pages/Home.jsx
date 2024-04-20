@@ -4,7 +4,7 @@ import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.p
 import axios from 'axios';
 import HostelComponent from "./Hostel_component";
 import "../components/Navbar";
-import "../styles/Home_style.module.css"
+import styles from "../styles/Home_style.module.css"
 
 const Home = () => {
     
@@ -67,7 +67,7 @@ const Home = () => {
           </svg>
           Rooms
         </a>
-        <a href="index3.html">
+        <a href="/Adminin">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={25}
@@ -96,7 +96,7 @@ const Home = () => {
           Maintenance
         </a>
       </div>
-      <div className="profile-section">
+      <div className={styles.profile_section}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={40}
@@ -118,6 +118,7 @@ const Home = () => {
         >
           <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
         </svg>
+        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={40}
@@ -128,11 +129,24 @@ const Home = () => {
         >
           <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
         </svg>
+        <a href="/loginadmin">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width={42} 
+          height={42} 
+          fill="currentColor" 
+          class="bi bi-box-arrow-left" 
+          viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+          </svg>
+         </a>
+
       </div>
     </nav>
   </div>
-  <div className="dashboard">
-    <div className="option-1">
+  <div className={styles.dashboard}>
+    <div className={styles.option_1}>
       <a href="id1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +161,7 @@ const Home = () => {
         Analytics
       </a>
     </div>
-    <div className="option-2">
+    <div className={styles.option_2}>
       <a href="id2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +177,7 @@ const Home = () => {
         Students
       </a>
     </div>
-    <div className="option-3">
+    <div className={styles.option_3}>
       <a href="id3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +209,7 @@ const Home = () => {
       </a>
     </div>
   </div>
-  <div className="occupancy">
+  <div className={styles.occupancy}>
     <a href="id2">
       Occupancy
       <svg
@@ -209,7 +223,7 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="occupancy-border">
+    <div className={styles.occupancy_border}>
     {/* <div className="hostels-container"> */}
         <HostelComponent hostelNo={1} />
         <HostelComponent hostelNo={2} />
@@ -219,7 +233,7 @@ const Home = () => {
       {/* </div> */}
     </div>
   </div>
-  <div className="complaints">
+  <div className={styles.complaints}>
     <a href="id">
       Complaints
       <svg
@@ -233,29 +247,29 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="complaints-border">
-      <div className="progress-bar">
-        <div className="skill html">
-          <span className="complaint-progress">{(( complaintProgress.resolvedComplaints )/ complaintProgress.totalComplaints)* 100} %</span>
+    <div className={styles.complaints_border}>
+      <div className={styles.progress_bar}>
+        <div className={`${styles.skill} html`}>
+          <span className={styles.complaint_progress}>{(( complaintProgress.resolvedComplaints )/ complaintProgress.totalComplaints)* 100} %</span>
         </div>
       </div>
-      <div className="complaints-box">
-      <div className="total-complaints-box">
+      <div className={styles.complaints_box}>
+      <div className={styles.total_complaints_box}>
       Total Complaints
       <p>{complaintProgress.totalComplaints}</p>
     </div>
-    <div className="resolved-box">
+    <div className={styles.resolved_box}>
       Resolved
       <p>{complaintProgress.resolvedComplaints}</p>
     </div>
-    <div className="open-box">
+    <div className={styles.open_box}>
       Open
       <p>{complaintProgress.totalComplaints-complaintProgress.resolvedComplaints}</p>
     </div>
       </div>
     </div>
   </div>
-  <div className="student-update">
+  <div className={styles.student_update}>
     <a href="id123">
       Student Update
       <svg
@@ -269,34 +283,34 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="student-update-border">
-      <div className="notifications">
+    <div className={styles.student_update_border}>
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Piyush Priyadarshi</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Rohan Phutke</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Avanish Gurjar</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Aman Raj</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Anand Raj</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Saurav Gitte</span>
       </div>
     </div>
   </div>
-  <div className="emergency-button">
+  <div className={styles.emergency_button}>
     <a href="id">
       Notifications
       <svg
@@ -310,20 +324,20 @@ const Home = () => {
         <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
       </svg>
     </a>
-    <div className="emergency-button-border">
-      <div className="notifications">
+    <div className={styles.emergency_button_border}>
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 01</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 02</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 03</span>
       </div>
-      <div className="notifications">
+      <div className={styles.notifications}>
         <img src={logo} alt="IIIT A" />
         <span>Notify 04</span>
       </div>

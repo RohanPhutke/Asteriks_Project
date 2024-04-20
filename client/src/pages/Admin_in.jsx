@@ -30,7 +30,7 @@ const Adminin = () => {
               </svg>
               Dashboard
             </a>
-            <a className={styles.a} href="/Roomallocation">
+            <a className={styles.a} href="/StudentRoomAll">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}

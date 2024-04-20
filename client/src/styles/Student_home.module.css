@@ -160,14 +160,20 @@ html, body{
   border-bottom: 1px solid;
   border-color: black;
   box-shadow: 0px 0px  8px var(--dark-gray) inset;
+  text-align: left;
 
 }
 
+.option_1 svg, .option_2 svg, .option_3 svg, .option_4 svg{
+  margin-right: 10px;
+}
+
+.option_1:hover svg path, .option_2:hover svg path, .option_3:hover svg path, .option_4:hover svg path{
+  color: aqua;
+}
+
 .option_1:hover, .option_2:hover, .option_3:hover, .option_4:hover{
- opacity: 0.3;
- background-color: black;
- border-radius: 10px;
- align-items: center;
+  transform: scale(1.1);
 }
 
 .occupancy span{
@@ -178,6 +184,7 @@ html, body{
 
 .occupancy img{
   height: 200px;
+  width: 200px;
   /* position: relative; */
   margin-left: 10%;
   margin-right: 10%;
@@ -186,7 +193,14 @@ html, body{
   background-color: white;
 }
 
-.occupancy_heading button{
+.profile_buttons{
+  margin-left: 75%;
+  justify-content: space-evenly;
+  margin-right: 10px;
+  flex-direction: row-reverse
+}
+
+.profile_buttons button{
   background-color: aqua;
   font-size: 15px;
   font-weight: 600;
@@ -194,7 +208,7 @@ html, body{
   height: 30px;
   border: none;
   border-radius: 10px;
-  margin-left: 88%;
+  /* margin-left: 88%; */
   /* margin-top: 1%; */
 }
 
@@ -245,7 +259,7 @@ html, body{
   grid-area: occupancy;
   border-radius: 15px;
   /* display: flex; */
-  overflow-y: auto;
+  overflow: hidden;
   padding-left: 18px;
   padding-top: 13px;  
 }
@@ -356,3 +370,19 @@ html, body{
   box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
 }
 
+.profile_buttons{
+  display: flex;
+}
+
+.input_box_profile{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  color: white;
+  margin-left: 7px;
+}
+
+button:hover{
+  cursor: pointer;
+}

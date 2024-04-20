@@ -18,7 +18,7 @@ const Adminin = () => {
           </div>
           <div className={styles.choices_section}>
             <a className={styles.a} href="/Home">
-              <svg 
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
                 height={25}
@@ -30,8 +30,8 @@ const Adminin = () => {
               </svg>
               Dashboard
             </a>
-            <a className={styles.a}href="/Roomallocation">
-              <svg 
+            <a className={styles.a} href="/StudentRoomAll">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
                 height={25}
@@ -50,7 +50,7 @@ const Adminin = () => {
                 backgroundColor: "black"
               }}
             >
-              <svg 
+              <svg
                 width={25}
                 height={25}
                 fill="currentColor"
@@ -63,7 +63,7 @@ const Adminin = () => {
               Attendance
             </a>
             <a className={styles.a} href="#1">
-              <svg 
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
                 height={25}
@@ -78,7 +78,7 @@ const Adminin = () => {
             </a>
           </div>
           <div className={styles.profile_section}>
-            <svg 
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width={40}
               height={40}
@@ -89,7 +89,7 @@ const Adminin = () => {
               <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
               <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
             </svg>
-            <svg 
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width={40}
               height={40}
@@ -99,7 +99,7 @@ const Adminin = () => {
             >
               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
             </svg>
-            <svg 
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width={40}
               height={40}
@@ -177,19 +177,20 @@ const Adminin = () => {
         </div>
       </div>
       <div className={styles.occupancy}>
-        <a className={styles.a} href="id123">
-          Live Students Update
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={16}
-            height={16}
-            fill="currentColor"
-            className="bi bi-arrow-up-right-square-fill"
-            viewBox="0 0 16 16"
-          >
-            <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
-          </svg>
-        </a>
+        <div className={styles.leftalien}>
+          <a className={styles.a} href="id123">
+            Live Students Update
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={16}
+              height={16}
+              fill="currentColor"
+              className="bi bi-arrow-up-right-square-fill"
+              viewBox="0 0 16 16"
+            >
+            </svg>
+          </a>
+        </div>
         <button className={styles.export_data}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

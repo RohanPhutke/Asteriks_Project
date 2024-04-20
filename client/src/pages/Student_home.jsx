@@ -1,4 +1,4 @@
-import React,{useState,useEffect}  from "react";
+import React, { useState, useEffect } from "react";
 
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 import axios from 'axios';
@@ -7,23 +7,23 @@ import styles from "../styles/Student_home.module.css"
 
 const Studenthome = () => {
 
-    const [text, setText] = useState(' On leave');
-    const [isEditing, setIsEditing] = useState(false);
-    const [editedText, setEditedText] = useState('');
-  
-    const handleEditClick = () => {
-      setIsEditing(!isEditing);
-      setEditedText(text); // Reset edited text to current text value when entering edit mode
-    };
-  
-    const handleSaveClick = () => {
-      setText(editedText);
-      setIsEditing(false);
-    };
-  
-    const handleInputChange = (e) => {
-      setEditedText(e.target.value);
-    };
+  const [text, setText] = useState(' On leave');
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedText, setEditedText] = useState('');
+
+  const handleEditClick = () => {
+    setIsEditing(!isEditing);
+    setEditedText(text); // Reset edited text to current text value when entering edit mode
+  };
+
+  const handleSaveClick = () => {
+    setText(editedText);
+    setIsEditing(false);
+  };
+
+  const handleInputChange = (e) => {
+    setEditedText(e.target.value);
+  };
 
      const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
      const [email, setEmail] = useState('');
@@ -86,7 +86,7 @@ const Studenthome = () => {
             </svg>
             Dashboard
           </a>
-          <a href="StudentRoomAll">
+          <a href="Roomallocation">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={25}
@@ -241,13 +241,15 @@ const Studenthome = () => {
     </div>
     <div className={styles.occupancy}>
       <div className={styles.occupancy_heading}>
-        <p>Student Profile</p>
-              <button onClick={handleEditClick}>
+          <div><p>Student Profile</p></div>
+          <div className={styles.profile_buttons}>
+          <button onClick={handleEditClick}>
                 {isEditing ? 'Cancel' : 'Edit Status'}
               </button>
               {isEditing && (
                 <button onClick={handleSaveClick}>Save</button>
               )}
+          </div>            
       </div>
       <div className={styles.occupancy_border}>
         <img
@@ -269,7 +271,7 @@ const Studenthome = () => {
           <span>
             Status:
                {isEditing ? (
-                <input
+                <input className={styles.input_box_profile}
                   type="text"
                   value={editedText}
                   onChange={handleInputChange}
@@ -288,19 +290,7 @@ const Studenthome = () => {
       </div>
     </div>
     <div className={styles.student_update}>
-      <a href="id123">
         Student Update
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={16}
-          height={16}
-          fill="currentColor"
-          className="bi bi-arrow-up-right-square-fill"
-          viewBox="0 0 16 16"
-        >
-          <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
-        </svg>
-      </a>
       <div className={styles.student_update_border}>
         <div className={styles.notifications}>
           <img
@@ -348,19 +338,7 @@ const Studenthome = () => {
       </div>
     </div>
     <div className={styles.emergency_button}>
-      <a href="id">
-        Notifications
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={16}
-          height={16}
-          fill="currentColor"
-          className="bi bi-arrow-up-right-square-fill"
-          viewBox="0 0 16 16"
-        >
-          <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707" />
-        </svg>
-      </a>
+       <div className={styles.leftalien}>Notifications</div> 
       <div className={styles.emergency_button_border}>
         <div className={styles.notifications}>
           <img
@@ -396,7 +374,7 @@ const Studenthome = () => {
 </>
 
 
-    )
+  )
 }
 
 export default Studenthome

@@ -39,7 +39,7 @@ html, body{
 
 
 .container{
-    height: 100%;
+    height: 100vh;
     display: grid;
     gap: 1rem;
     /* grid-template-columns: repeat(auto-fit, minmax(200px, 500px)); */
@@ -139,34 +139,34 @@ html, body{
 }
 
 .option_1 a, .option_2 a, .option_3 a, .option_4 a{
-   list-style: none;
-   font-style: none;
-   text-decoration: none;
-   color: white; 
-}
-
-.option_1 svg, .option_2 svg, .option_3 svg, .option_4 svg{
-  margin-right: 10px;
-}
-
-.option_1, .option_2, .option_3, .option_4{
-    padding-left: 26px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid;
-    border-color: black;
-    box-shadow: 0px 0px  8px var(--dark-gray) inset;
-    text-align: left;
-
-}
-
-.option_1:hover svg path, .option_2:hover svg path, .option_3:hover svg path, .option_4:hover svg path{
-  color: aqua;
-}
-
-.option_1:hover, .option_2:hover, .option_3:hover, .option_4:hover{
-  transform: scale(1.1);
-}
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+  color: white; 
+ }
+ 
+ .option_1, .option_2, .option_3, .option_4{
+   padding-left: 26px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   border-bottom: 1px solid;
+   border-color: black;
+   box-shadow: 0px 0px  8px var(--dark-gray) inset;
+   text-align: left;
+ 
+ }
+ 
+ .option_1 svg, .option_2 svg, .option_3 svg, .option_4 svg{
+   margin-right: 10px;
+ }
+ 
+ .option_1:hover svg path, .option_2:hover svg path, .option_3:hover svg path, .option_4:hover svg path{
+   color: aqua;
+ }
+ 
+ .option_1:hover, .option_2:hover, .option_3:hover, .option_4:hover{
+   transform: scale(1.1);
+ }
 
 .occupancy{
     background-color: var(--dark-gray);
@@ -186,7 +186,7 @@ html, body{
   overflow-y: auto;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 12px; 
   display: flex;  
   flex-direction: column;
@@ -196,6 +196,50 @@ html, body{
   box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
 
 }
+
+.occupancy_border button{
+  background-color: aqua;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.occupancy_border p{
+  background-color: #181818;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.notifications_heading{
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  margin-top: 60px;
+  /* border: 1px dashed;
+  border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
+  box-shadow: 2px 2px 8px rgb(15, 15, 15) inset; */
+}
+
+.notifications_heading span{
+  position: relative;
+  left: 10px;
+  color: aqua;
+}
+
+.notifications_heading button{
+  opacity: 0;
+}
+
+/* .notifications_heading p{
+  opacity: 0;
+} */
 
 .occupancy a{
     display: inline-block;
@@ -221,29 +265,62 @@ html, body{
   margin-top: 5px;
   margin-right: 5px;
   margin-left: 5px;
+  justify-content: space-around;
+  display: flex;
 
 }
 
 .notifications span{
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
 
-.notifications img{
-  height: 25px;
-  /* background-color: rgb(1, 27, 25); */
-  border-radius: 40px;
-  padding-right: 20px;
-}
+
 
 .notifications:hover{
- opacity: 0.3;
+ opacity: 0.6;
  background-color: black;
  border-radius: 10px;
  align-items: center;
 }
 
+.notifications button:hover{
+  cursor: pointer;
+}
+
+.notifications1 a{
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.notifications1{
+  padding-left: 26px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: black;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* justify-content: space-around; */
+  display: flex;
+
+}
+
+.notifications1 p{
+  margin-left: 4%;
+}
+
+.notifications1:hover{
+  opacity: 0.3;
+  background-color: black;
+  border-radius: 10px;
+  align-items: center;
+ }
+
 .export_data{
-  background-color: rgb(36, 204, 36);
+  background-color: aqua;
   position: relative;
   left: 40%;
   top: 0.1%;
@@ -252,9 +329,40 @@ html, body{
   font-size: 15px;
   font-weight: 600;
   color: white;
+  margin-top: 2rem;
 }
 
-.leftalien{
+.export_data svg{
+   position: relative;
+   top: 3px;
+   stroke: #ffffff;
+}
+
+.inputbox1{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  color: white;
+}
+
+.inputbox2{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  color: white;
+}
+
+.inputbox3{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 180px;
+  color: white;
+}
+.leftalign{
   text-align: left;
-  padding-left: 0.5rem;
+  font-size: 30px;
+  margin-left: 1rem;
 }

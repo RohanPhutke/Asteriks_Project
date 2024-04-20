@@ -140,39 +140,35 @@ body {
   margin-left: 10px;
 }
 
-.option_1 a,
-.option_2 a,
-.option_3 a,
-.option_4 a {
+.option_1 a, .option_2 a, .option_3 a, .option_4 a{
   list-style: none;
   font-style: none;
   text-decoration: none;
-  color: white;
-}
-
-.option_1,
-.option_2,
-.option_3,
-.option_4 {
-  padding-left: 26px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid;
-  border-color: black;
-  box-shadow: 0px 0px 8px var(--dark-gray) inset;
-
-}
-
-.option_1:hover,
-.option_2:hover,
-.option_3:hover,
-.option_4:hover {
-  opacity: 0.3;
-  background-color: black;
-  border-radius: 10px;
-  align-items: center;
-}
-
+  color: white; 
+ }
+ 
+ .option_1, .option_2, .option_3, .option_4{
+   padding-left: 26px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   border-bottom: 1px solid;
+   border-color: black;
+   box-shadow: 0px 0px  8px var(--dark-gray) inset;
+   text-align: left;
+ 
+ }
+ 
+ .option_1 svg, .option_2 svg, .option_3 svg, .option_4 svg{
+   margin-right: 10px;
+ }
+ 
+ .option_1:hover svg path, .option_2:hover svg path, .option_3:hover svg path, .option_4:hover svg path{
+   color: aqua;
+ }
+ 
+ .option_1:hover, .option_2:hover, .option_3:hover, .option_4:hover{
+   transform: scale(1.1);
+ }
 .occupancys {
   background-color: var(--dark-gray);
   grid-area: occupancy;
@@ -553,8 +549,11 @@ body {
 .searchform button:hover {
   opacity: .9;
 }
-.leftAlien{
+
+.leftalien{
   text-align: left;
+  padding-left: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 
 .status_1:nth-child(1) {

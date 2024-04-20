@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
-import styles from "../styles/Student_room_all.module.css"
-import StudentRoomComp from "./Student_room_all_Hcomp";
+import styles from "../styles/Student_roomall_process.module.css";
 
-const Studentroomall = () => {
+const Studentroomallprocess = () => {
 
   return (
 
@@ -12,18 +11,18 @@ const Studentroomall = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <link rel="stylesheet" href="style3.css" />
-      <div className={styles.container0}>
-        <div className={styles.nav_container0}>
+      <div className={styles.container}>
+        <div className={styles.nav_container}>
           <nav>
-            <div className={styles.logo_section0}>
+            <div className={styles.logo_section}>
               <img
                 src={logo}
                 alt="IIITA"
               />
               <span>HMS</span>
             </div>
-            <div className={styles.choices_section0}>
-              <a href="/Home">
+            <div className={styles.choices_section}>
+              <a href="index1.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -37,7 +36,7 @@ const Studentroomall = () => {
                 Dashboard
               </a>
               <a
-                href="/Studentroomall"
+                href="index2.html"
                 style={{
                   boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
                   backgroundColor: "black"
@@ -55,7 +54,7 @@ const Studentroomall = () => {
                 </svg>
                 Rooms
               </a>
-              <a href="Adminin">
+              <a href="index3.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -121,7 +120,7 @@ const Studentroomall = () => {
         </div>
         <div className={styles.dashboard}>
           <div className={styles.option_1}>
-            <a href="/Studenthome">
+            <a href="id1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
@@ -167,7 +166,6 @@ const Studentroomall = () => {
             </a>
           </div>
           <div className={styles.option_4}>
-
             <a href="id4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -181,44 +179,150 @@ const Studentroomall = () => {
                 <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
               </svg>
               Assigned
-
             </a>
           </div>
         </div>
-        <div className="filter">
-          <form className={styles.searchform}>
-            <input type="text" placeholder="Are you searching for a vacant room?" />
-            <button type="submit">Search</button>
-          </form>
-        </div>
-        <div className={styles.occupancys}>
-          <span>
-            Hostel Updates
+        <div className={styles.occupancy}>
+          <div className={styles.leftalign}>
+            Book Your Rooms
+          </div>
+          <div className={styles.notifications_heading}>
+            <div>
+              <span>S No.</span>
+            </div>
+            <div>
+              <span>Roll No.</span>
+            </div>
+            <div>
+              <span>Branch</span>
+            </div>
+            <div>
+              <span>Name</span>
+            </div>
+            <div>
+              <span>Hostel No.</span>
+            </div>
+            <div>
+              <span>Status</span>
+            </div>
+            <div>
+              <span>Room No.</span>
+            </div>
+            <div>
+              <button>+</button>
+            </div>
+          </div>
+          <div className={styles.occupancy_border}>
+            <div className={styles.notifications}>
+              <p>2</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>2</div>
+              <div>Double</div>
+              <div>123</div>
+              <div><button>+</button></div>
+            </div>
+            <div className={styles.notifications}>
+              <p>2</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>2</div>
+              <div>Double</div>
+              <div>123</div>
+              <div><button>+</button></div>
+            </div>
+            <div className={styles.notifications}>
+              <p>3</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>2</div>
+              <div>Double</div>
+              <div>123</div>
+              <div><button>+</button></div>
+            </div>
+            <div className={styles.notifications}>
+              <p>4</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>2</div>
+              <div>Double</div>
+              <div>123</div>
+              <div><button>+</button></div>
+
+            </div>
+            <div className={styles.notifications}>
+              <p>5</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>2</div>
+              <div>Double</div>
+              <div>123</div>
+              <div><button>+</button></div>
+
+            </div>
+            <div className={styles.notifications}>
+              <p>6</p>
+              <div>IIT2022051</div>
+              <div>IT</div>
+              <div>Piyush Priyadarshi</div>
+              <div>2</div>
+              <div>Double</div>
+              <div>123</div>
+              <div><button>+</button></div>
+
+            </div>
+            <div className={styles.notifications}>
+              <p>7</p>
+              <input className={styles.inputbox1} type="text" placeholder="roll no." />
+              <input className={styles.inputbox2} type="text" placeholder="branch" />
+              <input className={styles.inputbox3} type="text" placeholder="name" />
+              <span>1</span>
+              <span>Double</span>
+              <span>123</span>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={16}
+                  height={16}
+                  fill="currentColor"
+                  className="bi bi-check-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button className={styles.export_data}>
+            Proceed
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={16}
               height={16}
               fill="currentColor"
-              className="bi bi-arrow-up-right-square-fill"
+              className="bi bi-arrow-right"
               viewBox="0 0 16 16"
             >
+              <path
+                fillRule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
             </svg>
-          </span>
-          <div className={styles.occupancys_border}>
-            <div className={styles.leftalien}>
-              <StudentRoomComp hostelNo={1} />
-              <StudentRoomComp hostelNo={2} />
-              <StudentRoomComp hostelNo={3} />
-              <StudentRoomComp hostelNo={4} />
-              <StudentRoomComp hostelNo={5} />
-            </div>
-          </div>
+          </button>
         </div>
       </div>
     </>
 
 
+
+
+
   )
 }
 
-export default Studentroomall
+export default Studentroomallprocess

@@ -136,7 +136,7 @@ html, body{
     grid-area: dashboard;
     border-radius: 15px;
     margin-left: 10px;
-    height: 90%;
+    /* height: 90%; */
 }
 
 .option_1 a, .option_2 a, .option_3 a, .option_4 a{
@@ -314,10 +314,17 @@ html, body{
 
 .seat {
   background-color: #444451;
+  /* background-color: aqua; */
+  color: aqua;
+  /* color: #353535; */
+  align-items: center;
+  display: flex;
+  padding-left: 20px;
   height: 50px;
   width: 70px;
   margin: 3px;
   border-radius: 2px;
+  /* font-weight: 600; */
 }
 
 .seat.selected {

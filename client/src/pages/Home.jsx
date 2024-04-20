@@ -54,7 +54,7 @@ const Home = () => {
               </svg>
               Dashboard
             </a>
-            <a href="/Roomallocation">
+            <a href="/StudentRoomall">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}

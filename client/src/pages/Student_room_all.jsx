@@ -23,7 +23,7 @@ const Studentroomall = () => {
               <span>HMS</span>
             </div>
             <div className={styles.choices_section0}>
-              <a href="/StudentHome">
+              <a href="/Home">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -55,7 +55,7 @@ const Studentroomall = () => {
                 </svg>
                 Rooms
               </a>
-              <a href="index3.html">
+              <a href="Adminin">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}

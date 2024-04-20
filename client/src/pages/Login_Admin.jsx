@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import loginBg from "./login_admin_bg.jpg";
+import loginBg from "../img/login_admin_bg.jpg";
 // import loginBg from "./login-bg.png";
 import styles from "../styles/Loginstyle.module.scss";
 const Login_Admin = () => {

@@ -30,7 +30,7 @@ const Adminout = () => {
               </svg>
               Dashboard
             </a>
-            <a className={styles.a} href="/Roomallocation">
+            <a className={styles.a} href="/StudentRoomall">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}

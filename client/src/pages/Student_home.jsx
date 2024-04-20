@@ -241,13 +241,15 @@ const Studenthome = () => {
     </div>
     <div className={styles.occupancy}>
       <div className={styles.occupancy_heading}>
-        <p>Student Profile</p>
-              <button onClick={handleEditClick}>
+          <div><p>Student Profile</p></div>
+          <div className={styles.profile_buttons}>
+          <button onClick={handleEditClick}>
                 {isEditing ? 'Cancel' : 'Edit Status'}
               </button>
               {isEditing && (
                 <button onClick={handleSaveClick}>Save</button>
               )}
+          </div>            
       </div>
       <div className={styles.occupancy_border}>
         <img
@@ -269,7 +271,7 @@ const Studenthome = () => {
           <span>
             Status:
                {isEditing ? (
-                <input
+                <input className={styles.input_box_profile}
                   type="text"
                   value={editedText}
                   onChange={handleInputChange}

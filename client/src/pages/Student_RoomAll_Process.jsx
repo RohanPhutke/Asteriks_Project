@@ -3,7 +3,7 @@ import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.p
 import styles from "../styles/Student_roomall_process.module.css";
 import axios from "axios";
 const Studentroomallprocess = () => {
-  
+
   const DynamicDivs = ({ num }) => {
     const generateDivs = () => {
       const divs = [];
@@ -17,9 +17,9 @@ const Studentroomallprocess = () => {
             <div>{selectedRooms[0].hostelNo}</div>
             <div>Double</div>
             <div>{selectedRooms[0].roomNumber}</div>
-            <div>
+            {/* <div>
               <button>+</button>
-            </div>
+            </div> */}
           </div>
         );
       } else if (num === 2) {
@@ -34,9 +34,9 @@ const Studentroomallprocess = () => {
                 <div>{selectedRooms[0].hostelNo}</div>
                 <div>Double</div>
                 <div>{selectedRooms[0].roomNumber}</div>
-                <div>
+                {/* <div>
                   <button>+</button>
-                </div>
+                </div> */}
               </div>
             );
   
@@ -50,9 +50,9 @@ const Studentroomallprocess = () => {
               <div>{selectedRooms[1].hostelNo}</div>
               <div>Double</div>
               <div>{selectedRooms[1].roomNumber}</div>
-              <div>
+              {/* <div>
                 <button>+</button>
-              </div>
+              </div> */}
             </div>
           );
         }
@@ -69,9 +69,9 @@ const Studentroomallprocess = () => {
                 <div>{selectedRooms[0].hostelNo}</div>
                 <div>Double</div>
                 <div>{selectedRooms[0].roomNumber}</div>
-                <div>
+                {/* <div>
                   <button>+</button>
-                </div>
+                </div> */}
               </div>
             );
   
@@ -87,9 +87,9 @@ const Studentroomallprocess = () => {
               <div>Double</div>
               {(i>2) && <div>{selectedRooms[2].roomNumber}</div>}
               {(i<=2) && <div>{selectedRooms[1].roomNumber}</div>}
-              <div>
+              {/* <div>
                 <button>+</button>
-              </div>
+              </div> */}
             </div>
           );
         }
@@ -132,7 +132,7 @@ const Studentroomallprocess = () => {
   const nums = selectedRooms.length;
  console.log(selectedRooms);
  var rollNo = localStorage.getItem('loggedInEmail');
- rollNo = rollNo.slice(0,rollNo.length - 12);
+//  rollNo = rollNo.slice(0,rollNo.length - 12);
 
   return (
 
@@ -338,25 +338,25 @@ const Studentroomallprocess = () => {
             <div>
               <span>Room No.</span>
             </div>
-            <div>
+            {/* <div>
               <button>+</button>
-            </div>
+            </div> */}
           </div>
           <div className={styles.occupancy_border}>
           <div key={1} className={styles.notifications}>
             <p>1</p>
-            <div>{rollNo.toUpperCase()}</div>
-            <div>{rollNo.toUpperCase().slice(1,3)}</div>
+            {/* <div>{rollNo.toUpperCase()}</div> */}
+            {/* <div>{rollNo.toUpperCase().slice(1,3)}</div> */}
             <div>{resultantInfo.name}</div>
             <div>{selectedRooms[0].hostelNo}</div>
             <div>Double</div>
             <div>{selectedRooms[0].roomNumber}</div>
-            <div>
+            {/* <div>
               <button>+</button>
-            </div>
+            </div> */}
            </div>
-          </div>
             <DynamicDivs num={nums}/>
+          </div>
           <button className={styles.export_data}>
             Proceed
             <svg

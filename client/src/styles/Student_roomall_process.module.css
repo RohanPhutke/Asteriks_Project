@@ -173,6 +173,7 @@ html, body{
     grid-area: occupancy;
     border-radius: 15px;
     margin-right: 10px;
+    /* margin-bottom: 30px; */
     overflow-y: hidden;
     padding-left: 12px;
     padding-top: 15px;
@@ -184,18 +185,31 @@ html, body{
 .occupancy_border{
   background-color: var(--dark-gray);
   overflow-y: auto;
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
   margin-top: 30px;
-  margin-bottom: 12px; 
+  margin-bottom: 7px; 
   display: flex;  
   flex-direction: column;
   max-height: 90%;
-  border: 1px dashed;
+  /* border: 1px dashed; */
+  width: 100%;
   border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
   box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
 
 }
+
+.inputBox{
+  background-color: #353434;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  color: white;
+  /* add margin to placeholder */
+  padding-left: 10px;
+}
+
+
 
 .occupancy_border button{
   background-color: aqua;
@@ -211,7 +225,7 @@ html, body{
   width: 30px;
   align-items: center;
   padding-left: 10px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .notifications_heading{
@@ -240,6 +254,7 @@ html, body{
 /* .notifications_heading p{
   opacity: 0;
 } */
+
 
 .occupancy a{
     display: inline-block;
@@ -365,4 +380,12 @@ html, body{
   text-align: left;
   font-size: 30px;
   margin-left: 1rem;
+}
+
+.notifications button {
+  background-color: aqua;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
 }

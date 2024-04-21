@@ -228,11 +228,10 @@ body {
   margin-top: 5px;
   margin-right: 5px;
   margin-left: 5px;
-
 }
 
 .notificationss span {
-  color: aqua;
+  color: white;
 }
 
 
@@ -255,7 +254,7 @@ body {
   padding-left: 26px;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border-radius: 15px;
   margin-top: 5px;
   margin-right: 5px;
@@ -296,9 +295,9 @@ body {
   display: flex;
   flex-direction: column;
   max-height: 10%;
-  border: 1px dashed;
+  /* border: 1px dashed;
   border-image: linear-gradient(120deg, #1d1d1d, rgb(0, 0, 0)) 10;
-  box-shadow: 2px 2px 8px rgb(44, 46, 46) inset;
+  box-shadow: 2px 2px 8px rgb(44, 46, 46) inset; */
 }
 
 .status_container {
@@ -310,9 +309,14 @@ body {
 
 .status_1 {
   background-color: var(--dark-gray);
-  /* height:5px;
-  width:55px; */
 }
+
+.status_3 {
+  background-color: var(--dark-gray);
+  justify-content: space-around;
+
+}
+
 
 .status_2 {
   background-color: var(--dark-gray);
@@ -554,4 +558,101 @@ body {
   text-align: left;
   padding-left: 0.5rem;
   padding-bottom: 0.2rem;
+}
+.status_1{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  border-radius: 8px;
+  height: 70px;
+  width: 120px;
+}
+
+.status_1 span:nth-child(1)  {
+  font-size: small;
+  margin-top: 4px;
+  margin-bottom: 11px;
+}
+
+ .status_3:nth-child(1) {
+  color: rgb(255, 0, 225);
+  display: flex;
+  align-items: center;
+}
+
+
+.status_3:nth-child(2) {
+  color: rgb(39, 198, 111);
+  display: flex;
+  align-items: center;
+}
+
+.status_3:nth-child(3) {
+  color: rgb(255, 0, 0);
+  display: flex;
+  align-items: center;
+} 
+.status_1 span {
+  color: white;
+  
+}
+.status_1 span:nth-child(1){
+  color:lightgrey;
+}
+
+.status_2 span{
+color: lightgrey;
+font-size: small;
+}
+
+.status_2{
+  display:flex;
+  flex-direction:row;
+  border-radius: 8px;
+}
+
+.status_2 :nth-child(1){
+ margin-left: 20px;
+ margin-top: 7px;
+}
+.status_2 :nth-child(2){
+  margin-left: 65px;
+  margin-top: 7px;
+ }
+ .status_2 :nth-child(3){
+  margin-left: 65px;
+  margin-top: 7px;
+ }
+
+ .status_3{
+  border-radius: 8px;
+ }
+
+
+.notification{
+  height: 50px;
+  background-color: rgb(61, 59, 59);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.notification span{
+  font-size: 17px;
+}
+.notification :nth-child(1){
+  margin-right: 130px;
+  font-family: 'Montserrat';font: size 40px;
+  color: rgb(255, 255, 255);
+}
+
+.notification :nth-child(2){
+  margin-right: 130px;
+  font-family: 'Montserrat';font: size 40px;
+}
+.status_2 span span{
+  display:flex;
+  flex-direction:row;
+  font-size: large;
 }

@@ -17,7 +17,7 @@ import Adminin from './pages/Admin_in';
 import Adminout from './pages/Admin_out';
 import Studenthome from './pages/Student_home';
 import Studentroomall from './pages/Student_room_all';
-import Studentroomallprocess from './pages/Student_RoomAll_Process';
+import RoomRequestComp from './pages/StudentRoomRequest/RoomRequestComp';
 
 const hostelNumbers = [1, 2, 3, 4, 5];
 const Layout = () =>{
@@ -85,8 +85,8 @@ const router = createBrowserRouter([
 
   
   {
-    path:"/Studentroomallprocess",
-    element : <Studentroomallprocess/>
+    path:"/Roomrequest",
+    element : <RoomRequestComp/>
   }
 ]);
 function App() {

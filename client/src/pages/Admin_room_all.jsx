@@ -30,7 +30,7 @@ const RoomAllocation = () => {
   const handleLockRooms = () => {
     // Logic to lock selected rooms
     localStorage.setItem('lockedRooms',JSON.stringify(selectedRooms));
-    navigate('/Studentroomallprocess');
+    navigate('/Roomrequest');
     // You can perform further actions here, like sending the selected rooms to the server
   };
 
@@ -470,7 +470,7 @@ const RoomAllocation = () => {
               <ul className={styles.showcase}>
                 <li>
                   <div className={styles.showcase_seat} />
-                  <small>N/A</small>
+                  <small>Vacant</small>
                 </li>
                 <li>
                   <div className={styles.showcase_seat_selected} />
@@ -575,7 +575,7 @@ const RoomAllocation = () => {
               <ul className={styles.showcase}>
                 <li className={styles.li}>
                   <div className={styles.showcase_seat} />
-                  <small className={styles.small}>N/A</small>
+                  <small className={styles.small}>Vacant</small>
                 </li>
                 <li>
                   <div className={styles.showcase_seat_selected} />

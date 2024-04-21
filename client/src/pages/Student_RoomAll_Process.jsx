@@ -355,8 +355,8 @@ const Studentroomallprocess = () => {
                 <button>+</button>
               </div> */}
             </div>
-          </div>
           <DynamicDivs num={nums} />
+          </div>
           <button className={styles.export_data}>
             Proceed
             <svg

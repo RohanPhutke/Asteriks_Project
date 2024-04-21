@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 import axios from 'axios';
-import styles from "../styles/Student_home.module.css"
+import styles from "../styles/Student_home.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -33,19 +33,24 @@ const Studenthome = () => {
   };
 
      const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
-     const [email, setEmail] = useState('');
+     const [email, setEmail] = useState("iit2022047@iiita.ac.in");
      useEffect(() => {
       const storedEmail = localStorage.getItem('loggedInEmail');
-      if (storedEmail) {
-         setEmail(storedEmail);
-      }
-      
+      const defaultEmail = "iit2022047@iiita.ac.in"; 
+      setEmail(storedEmail ? storedEmail : defaultEmail);
+      console.log("Before fetching info");
     const fetchInfo = async () => {
         try{
           const res_info = await axios.get(`/studenthome?email=${email}`);
-          // console.log(res_info.data);
+          console.log(res_info.data);
           const {studentName,studentHostel,RoomNo,imgPath} = res_info.data;
-           setProgress({name : studentName,hostelName : studentHostel,RoomNo,imagePath:imgPath});
+          if (studentName && studentHostel && RoomNo && imgPath) {
+            setProgress({ name: studentName, hostelName: studentHostel, RoomNo, imagePath: imgPath });
+            
+          } else {
+            console.error("Response data is missing expected properties:", res_info.data);
+          }
+          //  setProgress({name : studentName,hostelName : studentHostel,RoomNo,imagePath:imgPath});
           //  console.log(resultantInfo.imagePath);
         }
         catch(error){
@@ -53,6 +58,7 @@ const Studenthome = () => {
         }
       }
       fetchInfo();
+      console.log("After fetching info");
      },[email])
     return (
        
@@ -263,19 +269,19 @@ const Studenthome = () => {
       </div>
       <div className={styles.occupancy_border}>
         <img
-          src={resultantInfo.imagePath}
+          src={resultantInfo?.imagePath || ""}
           alt="IIITA"
         />
         <div className={styles.dashboard_content}>
-          <span>Name : {resultantInfo.name}</span>
+          <span>Name : {resultantInfo?.name || "Default Name"}</span>
           <br />
           <span>Roll No. : {email.slice(0,email.length - 12)}</span>
           <br />
           {/* <span>XYZ</span><br> */}
-          <span>Hostel : BH {resultantInfo.hostelName}</span>
+          <span>Hostel : BH {resultantInfo?.hostelName || "1"}</span>
           <br />
           {/* <span>BH 1 </span><br> */}
-          <span>Room No. : {resultantInfo.RoomNo}</span>
+          <span>Room No. : {resultantInfo?.RoomNo || "101"}</span>
           <br />
           {/* <span>123</span><br> */}
           <span>

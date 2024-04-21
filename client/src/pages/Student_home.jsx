@@ -40,9 +40,8 @@ const Studenthome = () => {
          setEmail(storedEmail);
       }
       
-      const fetchInfo = async () => {
+    const fetchInfo = async () => {
         try{
-          
           const res_info = await axios.get(`/studenthome?email=${email}`);
           // console.log(res_info.data);
           const {studentName,studentHostel,RoomNo,imgPath} = res_info.data;
@@ -54,8 +53,7 @@ const Studenthome = () => {
         }
       }
       fetchInfo();
-     })
-    //  console.log(logo);
+     },[email])
     return (
        
       <>
@@ -97,8 +95,8 @@ const Studenthome = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={25}
-              height={25}
-              fill="currentColor"
+              height={25}   
+              fill="currentColor" 
               className="bi bi-laptop"
               viewBox="0 0 16 16"
             >

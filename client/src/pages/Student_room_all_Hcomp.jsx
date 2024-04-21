@@ -37,13 +37,13 @@ const StudentRoomComp = ({ hostelNo }) => {
         </div>
         <div className={styles.room_status}>
           <div className={styles.status_container}>
-            <div className={styles.status_1}>
+            <div className={styles.status_3}>
             <i class="fa-solid fa-bed"></i>  <span>458</span>
             </div>
-            <div className={styles.status_1}>
+            <div className={styles.status_3}>
             <i class="fa-solid fa-box-tissue"></i>  <span>5</span>
             </div>
-            <div className={styles.status_1}>
+            <div className={styles.status_3}>
               <i class="fa-solid fa-chair"></i> <span>5</span>
             </div>
             <div className={styles.status_1}>
@@ -60,9 +60,15 @@ const StudentRoomComp = ({ hostelNo }) => {
             </div>
           </div>
           <div className={styles.status_2}>
-            <span>students</span>
-            <span>In Hostel</span>
-            <span>Outside Hostel</span>
+            <span>Students
+              <span>600</span>
+            </span> 
+            <span>In Hostel
+              <span>400</span>
+            </span>
+            <span>Outside Hostel
+              <span>200</span>
+            </span>
           </div>
         </div>
         <div className={styles.room_furniture}>
@@ -83,17 +89,21 @@ const StudentRoomComp = ({ hostelNo }) => {
               </span>
             </div>
             <div className={styles.emergency_button_border}>
-              <div className={styles.notification}>
+            <div className={styles.notification}>
                 <span>Table</span>
+                <span>800</span>
               </div>
               <div className={styles.notification}>
                 <span>Chair</span>
+                <span>700</span>
               </div>
               <div className={styles.notification}>
                 <span>Fan</span>
+                <span>450</span>
               </div>
               <div className={styles.notification}>
-                <span>Tube Light</span>
+                <span id="tubeLightSpan">Tube Light</span>
+                <span>800</span>
               </div>
             </div>
           </div>

@@ -11,9 +11,9 @@ const Studentroomallprocess = () => {
         divs.push(
           <div key={1} className={styles.notifications}>
             <p>2</p>
-            <div>IIT2022051</div>
+            <div><input className={styles.inputBox} placeholder="Roll Number" /></div>
             <div>IT</div>
-            <div>Piyush Priyadarshi</div>
+            <div><input className={styles.inputBox} placeholder="Name" /></div>
             <div>{selectedRooms[0].hostelNo}</div>
             <div>Double</div>
             <div>{selectedRooms[0].roomNumber}</div>
@@ -24,13 +24,13 @@ const Studentroomallprocess = () => {
         );
       } else if (num === 2) {
         for (let i = 0; i < 3; i++) {
-          if(i==0){
+          if (i == 0) {
             divs.push(
               <div key={i} className={styles.notifications}>
                 <p>2</p>
-                <div>IIT2022051</div>
+                <div><input className={styles.inputBox} placeholder="Roll Number" /></div>
                 <div>IT</div>
-                <div>Piyush Priyadarshi</div>
+                <div><input className={styles.inputBox} placeholder="Name" /></div>
                 <div>{selectedRooms[0].hostelNo}</div>
                 <div>Double</div>
                 <div>{selectedRooms[0].roomNumber}</div>
@@ -39,33 +39,33 @@ const Studentroomallprocess = () => {
                 </div> */}
               </div>
             );
-  
-          }          else {
-          divs.push(
-            <div key={i} className={styles.notifications}>
-              <p>{i+2}</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              <div>{selectedRooms[1].hostelNo}</div>
-              <div>Double</div>
-              <div>{selectedRooms[1].roomNumber}</div>
-              {/* <div>
-                <button>+</button>
-              </div> */}
-            </div>
-          );
-        }
+
+          } else {
+            divs.push(
+              <div key={i} className={styles.notifications}>
+                <p>{i + 2}</p>
+                <div><input className={styles.inputBox} placeholder="Roll Number" /></div>
+                <div>IT</div>
+                <div><input className={styles.inputBox} placeholder="Name" /></div>
+                <div>{selectedRooms[1].hostelNo}</div>
+                <div>Double</div>
+                <div>{selectedRooms[1].roomNumber}</div>
+                {/* <div>
+                  <button>+</button>
+                </div> */}
+              </div>
+            );
+          }
         }
       } else if (num === 3) {
         for (let i = 0; i < 5; i++) {
-          if(i==0){
+          if (i == 0) {
             divs.push(
               <div key={i} className={styles.notifications}>
                 <p>2</p>
-                <div>IIT2022051</div>
+                <div><input className={styles.inputBox} placeholder="Roll Number" /></div>
                 <div>IT</div>
-                <div>Piyush Priyadarshi</div>
+                <div><input className={styles.inputBox} placeholder="Name" /></div>
                 <div>{selectedRooms[0].hostelNo}</div>
                 <div>Double</div>
                 <div>{selectedRooms[0].roomNumber}</div>
@@ -74,65 +74,65 @@ const Studentroomallprocess = () => {
                 </div> */}
               </div>
             );
-  
-          }          else {
-          divs.push(
-            <div key={i} className={styles.notifications}>
-              <p>{i+2}</p>
-              <div>IIT2022051</div>
-              <div>IT</div>
-              <div>Piyush Priyadarshi</div>
-              {(i>2) && <div>{selectedRooms[2].hostelNo}</div>}
-              {(i<=2) && <div>{selectedRooms[1].hostelNo}</div>}
-              <div>Double</div>
-              {(i>2) && <div>{selectedRooms[2].roomNumber}</div>}
-              {(i<=2) && <div>{selectedRooms[1].roomNumber}</div>}
-              {/* <div>
-                <button>+</button>
-              </div> */}
-            </div>
-          );
-        }
+
+          } else {
+            divs.push(
+              <div key={i} className={styles.notifications}>
+                <p>{i + 2}</p>
+                <div><input className={styles.inputBox} placeholder="Roll Number" /></div>
+                <div>IT</div>
+                <div><input className={styles.inputBox} placeholder="Name" /></div>
+                {(i > 2) && <div>{selectedRooms[2].hostelNo}</div>}
+                {(i <= 2) && <div>{selectedRooms[1].hostelNo}</div>}
+                <div>Double</div>
+                {(i > 2) && <div>{selectedRooms[2].roomNumber}</div>}
+                {(i <= 2) && <div>{selectedRooms[1].roomNumber}</div>}
+                <div >
+                  <button>+</button>
+                </div> */}
+              </div>
+            );
+          }
         }
       }
       return divs;
     };
-  
+
     return <>{generateDivs()}</>;
   };
 
-  const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
-     const [email, setEmail] = useState('');
-     useEffect(() => {
-      const storedEmail = localStorage.getItem('loggedInEmail');
-      if (storedEmail) {
-         setEmail(storedEmail);
+  const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0, RoomNo: 0, imagePath: 0 });//Initial Progress state
+  const [email, setEmail] = useState('');
+  useEffect(() => {
+    const storedEmail = localStorage.getItem('loggedInEmail');
+    if (storedEmail) {
+      setEmail(storedEmail);
+    }
+
+    const fetchInfo = async () => {
+      try {
+
+        const res_info = await axios.get(`/studenthome?email=${email}`);
+        // console.log(res_info.data);
+        const { studentName, studentHostel, RoomNo, imgPath } = res_info.data;
+        setProgress({ name: studentName, hostelName: studentHostel, RoomNo, imagePath: imgPath });
+        //  console.log(resultantInfo.imagePath);
       }
-      
-      const fetchInfo = async () => {
-        try{
-          
-          const res_info = await axios.get(`/studenthome?email=${email}`);
-          // console.log(res_info.data);
-          const {studentName,studentHostel,RoomNo,imgPath} = res_info.data;
-           setProgress({name : studentName,hostelName : studentHostel,RoomNo,imagePath:imgPath});
-          //  console.log(resultantInfo.imagePath);
-        }
-        catch(error){
-          console.log(`Error fetching student info for ${email}: `,error);
-        }
+      catch (error) {
+        console.log(`Error fetching student info for ${email}: `, error);
       }
-      fetchInfo();
-     })
+    }
+    fetchInfo();
+  })
 
 
 
   const storedSelectedRooms = localStorage.getItem('lockedRooms');
   const selectedRooms = storedSelectedRooms ? JSON.parse(storedSelectedRooms) : [];
   const nums = selectedRooms.length;
- console.log(selectedRooms);
- var rollNo = localStorage.getItem('loggedInEmail');
-//  rollNo = rollNo.slice(0,rollNo.length - 12);
+  console.log(selectedRooms);
+  var rollNo = localStorage.getItem('loggedInEmail');
+  //  rollNo = rollNo.slice(0,rollNo.length - 12);
 
   return (
 
@@ -343,19 +343,19 @@ const Studentroomallprocess = () => {
             </div> */}
           </div>
           <div className={styles.occupancy_border}>
-          <div key={1} className={styles.notifications}>
-            <p>1</p>
-            {/* <div>{rollNo.toUpperCase()}</div> */}
-            {/* <div>{rollNo.toUpperCase().slice(1,3)}</div> */}
-            <div>{resultantInfo.name}</div>
-            <div>{selectedRooms[0].hostelNo}</div>
-            <div>Double</div>
-            <div>{selectedRooms[0].roomNumber}</div>
-            {/* <div>
-              <button>+</button>
-            </div> */}
-           </div>
-            <DynamicDivs num={nums}/>
+            <div key={1} className={styles.notifications}>
+              <p>1</p>
+              {/* <div>{rollNo.toUpperCase()}</div> */}
+              {/* <div>{rollNo.toUpperCase().slice(1,3)}</div> */}
+              <div>{resultantInfo.name}</div>
+              <div>{selectedRooms[0].hostelNo}</div>
+              <div>Double</div>
+              <div>{selectedRooms[0].roomNumber}</div>
+              {/* <div>
+                <button>+</button>
+              </div> */}
+            </div>
+          <DynamicDivs num={nums} />
           </div>
           <button className={styles.export_data}>
             Proceed

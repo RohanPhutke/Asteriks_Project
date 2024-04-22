@@ -1,11 +1,13 @@
 // HostelComponent.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from "../styles/Student_room_all.module.css"
+import styles from "../../styles/Student_room_all.module.css"
 
 
 const StudentRoomComp = ({ hostelNo }) => {
   const [occupancy, setOccupancy] = useState(0);
+  const [totalStudents,setTotalstudents] = useState(0);
+  const [outStudents,setOutstudents] = useState(0);
 
   useEffect(() => {
     const fetchOccupancy = async () => {
@@ -16,8 +18,17 @@ const StudentRoomComp = ({ hostelNo }) => {
         console.error(`Error fetching occupancy for hostel ${hostelNo}:, error`);
       }
     };
-
+    const fetchHostelData = async () => {
+      try {
+         const response = await axios.get(`/hosteldata?hostelNo=${hostelNo}`);
+         setTotalstudents(response.data.totalStudents);
+         setOutstudents(response.data.outStudents);
+      } catch (error) {
+        console.log(`Error fetching hostel data for hostel ${hostelNo} : `,error);
+      }
+    }
     fetchOccupancy();
+    fetchHostelData();
   }, [hostelNo]);
 
   const dashOffset = 314 - (occupancy / 100) * 314;
@@ -61,13 +72,13 @@ const StudentRoomComp = ({ hostelNo }) => {
           </div>
           <div className={styles.status_2}>
             <span>Students
-              <span>600</span>
+              <span>{totalStudents}</span>
             </span> 
             <span>In Hostel
-              <span>400</span>
+              <span>{totalStudents - outStudents}</span>
             </span>
             <span>Outside Hostel
-              <span>200</span>
+              <span>{outStudents}</span>
             </span>
           </div>
         </div>

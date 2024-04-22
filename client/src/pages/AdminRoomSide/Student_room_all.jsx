@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
-import styles from "../styles/Student_room_all.module.css"
+import logo from "../Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
+import styles from "../../styles/Student_room_all.module.css"
 import StudentRoomComp from "./Student_room_all_Hcomp";
 
 const Studentroomall = () => {

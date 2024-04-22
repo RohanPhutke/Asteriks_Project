@@ -136,8 +136,9 @@ const Studentroomall = () => {
               Profile
             </a>
           </div>
-          <div className={styles.option_2}>
-            <a href="index3.html">
+          <div className={styles.option_2} onClick={showToast}
+            style={{ cursor: 'pointer' }}>
+            <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
@@ -151,8 +152,9 @@ const Studentroomall = () => {
               Occupancy
             </a>
           </div>
-          <div className={styles.option_3}>
-            <a href="index4.html">
+          <div className={styles.option_3} onClick={showToast}
+            style={{ cursor: 'pointer' }}>
+            <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}

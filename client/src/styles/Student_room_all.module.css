@@ -361,8 +361,7 @@ body {
 }
 
 .meters1 {
-  stroke-dasharray: 360;
-  stroke-dashoffset: 100;
+ 
   stroke: aqua;
   animation: progress1 1s ease-out;
   fill: none;
@@ -374,8 +373,7 @@ body {
 
 .meters2 {
   stroke: lime;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 160;
+ 
   animation: progress2 .75s ease-out;
   fill: none;
   stroke-width: 21px;
@@ -386,8 +384,7 @@ body {
 
 .meters3 {
   stroke: magenta;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 250;
+ 
   animation: progress3 .5s ease-out;
   fill: none;
   stroke-width: 21px;
@@ -398,8 +395,7 @@ body {
 
 .meters4 {
   stroke: rgb(247, 208, 37);
-  stroke-dasharray: 360;
-  stroke-dashoffset: 120;
+ 
   animation: progress4 .5s ease-out;
   fill: none;
   stroke-width: 21px;
@@ -410,8 +406,7 @@ body {
 
 .meters5 {
   stroke: rgb(241, 37, 37);
-  stroke-dasharray: 360;
-  stroke-dashoffset: 270;
+  
   animation: progress5 .5s ease-out;
   fill: none;
   stroke-width: 21px;

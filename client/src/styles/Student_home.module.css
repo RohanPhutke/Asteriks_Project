@@ -101,6 +101,12 @@ html, body{
     border-radius: 10px 10px 0px 0px;
 }
 
+.tippytooltip {
+  color: white;
+  font-size: 14px;
+}
+
+
 .choices_section svg{
   padding-right: 5px;
 }

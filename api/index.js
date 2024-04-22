@@ -4,6 +4,7 @@ import authRoutes from "./routes/auth.js"
 import { Hostelperc } from "./routes/hostelperc.js";
 import { complaint } from "./routes/complaintprogress.js";
 import { StudentHome } from "./routes/studentLogin.js";
+import Hosteldata from "./routes/hostelData.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
@@ -17,6 +18,7 @@ app.use(cors())
 app.get('/api/occupancy',Hostelperc);
 app.get('/api/complaintProgress',complaint);
 app.get('/api/studenthome',StudentHome);
+app.get('/api/hosteldata',Hosteldata);
 app.use("/api/auth",authRoutes);
 app.use("/api/user",userRoutes);
 

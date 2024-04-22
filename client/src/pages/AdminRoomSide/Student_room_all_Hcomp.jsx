@@ -37,15 +37,15 @@ const StudentRoomComp = ({ hostelNo }) => {
     <div className={styles.notificationss}>
       <div className={styles.leftAlien}><span >{`BH-${hostelNo}`}</span></div>
       <div className={styles.hostels_update}>
-        <div className={styles.spinners}>
-          <svg className={styles.spinners_svg} width={200} height={200}>
-            <circle className={styles.bgs} cx="50%" cy="50%" r="45%" />
-            <text x="35%" y="55%" fill="white">
-              {`${occupancy}%`}
-            </text>
-            <circle className={styles[`meters${hostelNo}`]} cx="50%" cy="50%" r="45%" style={{ strokeDasharray: 314, strokeDashoffset: dashOffset }} />
-          </svg>
-        </div>
+      <div className={styles.spinners}>
+              <svg className={styles.spinners_svg} width={200} height={200}>
+                <circle className={styles.bgs} cx={100} cy={100} r={90} />
+                <text x={80} y={120} fill="white">
+                {`${occupancy}%`}
+                </text>
+                <circle className={styles[`meters${hostelNo}`]} cx={100} cy={100} r={90} style={{ strokeDasharray: 314, strokeDashoffset: dashOffset }}/>
+              </svg>
+            </div>
         <div className={styles.room_status}>
           <div className={styles.status_container}>
             <div className={styles.status_3}>

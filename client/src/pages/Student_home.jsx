@@ -7,6 +7,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import  Tippy  from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+
 // import { usePrefersColorSchemeDark } from '@wojtekmaj/react-hooks';
 
 const Studenthome = () => {
@@ -15,10 +18,15 @@ const Studenthome = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedText, setEditedText] = useState('');
   const [value, onChange] = useState(new Date());
-  const [showCalendar, setShowCalendar] = useState(false); // State to control calendar visibility
+  const [showCalendar, setShowCalendar] = useState(false); 
+  const [shownotify, setShownotify] = useState(false); 
 
   const toggleCalendar = () => {
     setShowCalendar(!showCalendar);
+  };
+
+  const togglenotification = () => {
+    setShownotify(!shownotify);
   };
 
   const showToast = () => {
@@ -41,12 +49,10 @@ const Studenthome = () => {
   };
 
      const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
-     const [email, setEmail] = useState("iit2022047@iiita.ac.in");
+     const [email, setEmail] = useState(" ");
      useEffect(() => {
       const storedEmail = localStorage.getItem('loggedInEmail');
-      const defaultEmail = "iit2022047@iiita.ac.in"; 
-      setEmail(storedEmail ? storedEmail : defaultEmail);
-      console.log("Before fetching info");
+      setEmail(storedEmail);
     const fetchInfo = async () => {
         try{
           const res_info = await axios.get(`/studenthome?email=${email}`);
@@ -148,6 +154,8 @@ const Studenthome = () => {
           </a>
         </div>
         <div className={styles.profile_section} style={{ position: 'relative'}}>
+        <Tippy content= {<span className={styles.tippytooltip}>Calender</span>}>
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={40}
@@ -161,37 +169,57 @@ const Studenthome = () => {
             <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
           </svg>
+          </Tippy>
           {showCalendar && (
             <div style={{ position: 'absolute', top: '70px', right: '40px' }} className="dark-theme">
           <Calendar onChange={onChange} value={value} />
         </div>
             )}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={40}
-            height={40}
-            fill="currentColor"
-            className="bi bi-person-lines-fill"
-            viewBox="0 0 16 16"
-            onClick={showToast}
-            style={{ cursor: 'pointer' }}
-          >
-            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
-          </svg>
-          <svg
+             <Tippy content= {<span className={styles.tippytooltip}>Profile</span>}>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={40}
+                height={40}
+                fill="currentColor"
+                className="bi bi-person-lines-fill"
+                viewBox="0 0 16 16"
+                onClick={showToast}
+                style={{ cursor: 'pointer' }}
+              >
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+             </svg>
+             </Tippy>
+            <Tippy content= {<span className={styles.tippytooltip}>Notifications</span>}>
+             <svg
             xmlns="http://www.w3.org/2000/svg"
             width={40}
             height={40}
             fill="currentColor"
             className="bi bi-bell-fill"
             viewBox="0 0 16 16"
-            onClick={showToast}
+            onClick={togglenotification}
             style={{ cursor: 'pointer' }}
-          >
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+            data-tip="Notifications"
+            >
+               <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
           </svg>
+          </Tippy>
+   
+             
+                
           <a href="/loginStudent">
-          
+          {shownotify && (
+            <div className={styles.Notification_box}>
+              <div className={styles.Notification_box_header}>Notifications</div>
+              <div className={styles.Notification_box_content}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+             <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+             </svg>
+                Your notifications live here</div>
+            </div>
+           )}
+        
+          <Tippy content= {<span className={styles.tippytooltip}>Logout</span>}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           width={42} 
@@ -202,6 +230,7 @@ const Studenthome = () => {
             <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
             <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
           </svg>
+          </Tippy>
          </a>
         <ToastContainer
         position="bottom-left"

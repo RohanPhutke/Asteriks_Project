@@ -471,7 +471,7 @@
       stroke: #1A2C34;
     }
     
-    [class^="meter-"] {
+    [class^="meter_"] {
       fill: none;
       stroke-width: 10px;
       stroke-linecap: round;
@@ -480,36 +480,41 @@
     }
     
     .meter_1 {
-      stroke-dasharray: 360;
-      stroke-dashoffset: 100;
+      /* stroke-dasharray: 360;
+      stroke-dashoffset: 100; */
       stroke: aqua;
       animation: progress-1 1s ease-out;
     }
     .meter_2 {
       stroke: lime;
-      stroke-dasharray: 360;
-      stroke-dashoffset: 160;
+      /* stroke-dasharray: 360;
+      stroke-dashoffset: 160; */
       animation: progress-2 .75s ease-out;
     }
     .meter_3 {
       stroke: magenta;
-      stroke-dasharray: 360;
-      stroke-dashoffset: 250;
+      /* stroke-dasharray: 360;
+      stroke-dashoffset: 250; */
       animation: progress-3 .5s ease-out;
     }
   
     .meter_4 {
       stroke: rgb(247, 208, 37);
-      stroke-dasharray: 360;
-      stroke-dashoffset: 120;
+      /* stroke-dasharray: 360;
+      stroke-dashoffset: 120; */
       animation: progress-4 .5s ease-out;
     }
   
     .meter_5 {
       stroke: rgb(241, 37, 37);
-      stroke-dasharray: 360;
-      stroke-dashoffset: 270;
+      /* stroke-dasharray: 360;
+      stroke-dashoffset: 270; */
       animation: progress-5 .5s ease-out;
+    }
+    
+    .tippytooltip {
+      color: white;
+      font-size: 14px;
     }
     
     @keyframes progress-1 {

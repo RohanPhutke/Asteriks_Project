@@ -47,7 +47,7 @@ const RoomRequestComp = () =>{
     const selectedRooms = storedSelectedRooms ? JSON.parse(storedSelectedRooms) : [];
     const nums = selectedRooms.length;
     var rollNo = localStorage.getItem('loggedInEmail');
-    // rollNo = rollNo.slice(0,rollNo.length - 12);
+    rollNo = rollNo.slice(0,rollNo.length - 12);
     
     return (
         <>
@@ -259,8 +259,8 @@ const RoomRequestComp = () =>{
             <div className={styles.occupancy_border}>
               <div key={1} className={styles.notifications}>
                 <p>1</p>
-                {/* <div>{rollNo.toUpperCase()}</div> */}
-                {/* <div>{rollNo.toUpperCase().slice(1,3)}</div> */}
+                <div>{rollNo.toUpperCase()}</div>
+                <div>{rollNo.toUpperCase().slice(1,3)}</div>
                 <div>{resultantInfo.name}</div>
                 <div>{selectedRooms[0].hostelNo}</div>
                 <div>Double</div>

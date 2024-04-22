@@ -512,6 +512,11 @@
       animation: progress-5 .5s ease-out;
     }
     
+    .tippytooltip {
+      color: white;
+      font-size: 14px;
+    }
+    
     @keyframes progress-1 {
         from {
             stroke-dashoffset: 360;

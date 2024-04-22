@@ -7,6 +7,8 @@ import "../components/Navbar";
 import styles from "../styles/Home_style.module.css"
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import  Tippy  from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const Home = () => {
 
@@ -74,6 +76,7 @@ const Home = () => {
               Rooms
             </a>
             <a href="/Adminin">
+       
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
@@ -103,6 +106,7 @@ const Home = () => {
             </a>
           </div>
           <div className={styles.profile_section}>
+        <Tippy content= {<span className={styles.tippytooltip}>Calender</span>}> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={40}
@@ -116,6 +120,9 @@ const Home = () => {
               <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
               <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
             </svg>
+            </Tippy>
+        <Tippy content= {<span className={styles.tippytooltip}>Profile</span>}> 
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={40}
@@ -128,7 +135,9 @@ const Home = () => {
             >
               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
             </svg>
-                       
+            </Tippy>
+
+        <Tippy content= {<span className={styles.tippytooltip}>Notifications</span>}> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={40}
@@ -141,7 +150,9 @@ const Home = () => {
             >
               <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
             </svg>
+            </Tippy>
             <a href="/loginadmin">
+        <Tippy content= {<span className={styles.tippytooltip}>Logout</span>}> 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={42}
@@ -152,6 +163,7 @@ const Home = () => {
                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
               </svg>
+              </Tippy>
             </a>
             <ToastContainer
         position="bottom-left"

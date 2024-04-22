@@ -49,12 +49,10 @@ const Studenthome = () => {
   };
 
      const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0,RoomNo : 0,imagePath:0 });//Initial Progress state
-     const [email, setEmail] = useState("iit2022047@iiita.ac.in");
+     const [email, setEmail] = useState(" ");
      useEffect(() => {
       const storedEmail = localStorage.getItem('loggedInEmail');
-      const defaultEmail = "iit2022047@iiita.ac.in"; 
-      setEmail(storedEmail ? storedEmail : defaultEmail);
-      console.log("Before fetching info");
+      setEmail(storedEmail);
     const fetchInfo = async () => {
         try{
           const res_info = await axios.get(`/studenthome?email=${email}`);

@@ -2,6 +2,8 @@ import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.p
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/Admin_room_all_style.module.css";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const RoomAllocation = () => {
   const navigate = useNavigate();
@@ -27,6 +29,11 @@ const RoomAllocation = () => {
       }
     }
   };
+   
+  const showToast = () => {
+    toast.warning("Coming Soon");  
+   };
+
   const handleLockRooms = () => {
     // Logic to lock selected rooms
     localStorage.setItem('lockedRooms',JSON.stringify(selectedRooms));
@@ -135,6 +142,8 @@ const RoomAllocation = () => {
                 fill="currentColor"
                 className="bi bi-calendar-check"
                 viewBox="0 0 16 16"
+                onClick={showToast}
+            style={{ cursor: 'pointer' }}
               >
                 <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
@@ -146,6 +155,8 @@ const RoomAllocation = () => {
                 fill="currentColor"
                 className="bi bi-person-lines-fill"
                 viewBox="0 0 16 16"
+                onClick={showToast}
+            style={{ cursor: 'pointer' }}
               >
                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
               </svg>
@@ -156,9 +167,14 @@ const RoomAllocation = () => {
                 fill="currentColor"
                 className="bi bi-bell-fill"
                 viewBox="0 0 16 16"
+                onClick={showToast}
+            style={{ cursor: 'pointer' }}
               >
                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
               </svg>
+              <ToastContainer
+        position="bottom-left"
+        theme="dark"/>
             </div>
           </nav>
         </div>
@@ -178,8 +194,9 @@ const RoomAllocation = () => {
               Occupancy
             </a>
           </div>
-          <div className={styles.option_2}>
-            <a href="id2">
+          <div className={styles.option_2} onClick={showToast}
+            style={{ cursor: 'pointer' }}>
+            <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}

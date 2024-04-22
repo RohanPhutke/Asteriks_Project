@@ -38,3 +38,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.dark-theme {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+
+.react-calendar {
+  background-color: #444; /* Dark background color for the calendar */
+  color: #fff; /* Light text color for the calendar */
+}

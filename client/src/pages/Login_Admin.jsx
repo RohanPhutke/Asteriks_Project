@@ -4,9 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import loginBg from "../img/login_admin_bg.jpg";
 // import loginBg from "./login-bg.png";
 import styles from "../styles/Loginstyle.module.scss";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 const Login_Admin = () => {
 
-
+   const showToast = () => {
+      toast.warning("Coming Soon");  
+     };
+     
     const [inputs,setInputs] = useState({
         email :"",
         password : ""

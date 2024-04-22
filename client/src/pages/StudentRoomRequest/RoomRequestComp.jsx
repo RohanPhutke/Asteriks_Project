@@ -3,10 +3,23 @@ import React, { useState, useEffect } from "react";
 import logo from "../Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
 import styles from "../../styles/Student_roomall_process.module.css"
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
+
 const RoomRequestComp = () =>{
 
   const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0, RoomNo: 0, imagePath: 0 });//Initial Progress state
   const [email, setEmail] = useState('');
+
+  const showToast = () => {
+    toast.warning("Coming Soon");  
+   };
+
+   const proceedToast = () => {
+    toast.success("Request Sent Successfully");  
+   };
+
    useEffect(() => {
     const storedEmail = localStorage.getItem('loggedInEmail');
     if (storedEmail) {
@@ -34,7 +47,7 @@ const RoomRequestComp = () =>{
     const selectedRooms = storedSelectedRooms ? JSON.parse(storedSelectedRooms) : [];
     const nums = selectedRooms.length;
     var rollNo = localStorage.getItem('loggedInEmail');
-    rollNo = rollNo.slice(0,rollNo.length - 12);
+    // rollNo = rollNo.slice(0,rollNo.length - 12);
     
     return (
         <>
@@ -146,6 +159,9 @@ const RoomRequestComp = () =>{
                 >
                   <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
                 </svg>
+                <ToastContainer
+        position="bottom-left"
+        theme="dark"/>
               </div>
             </nav>
           </div>
@@ -243,8 +259,8 @@ const RoomRequestComp = () =>{
             <div className={styles.occupancy_border}>
               <div key={1} className={styles.notifications}>
                 <p>1</p>
-                <div>{rollNo.toUpperCase()}</div>
-                <div>{rollNo.toUpperCase().slice(1,3)}</div>
+                {/* <div>{rollNo.toUpperCase()}</div> */}
+                {/* <div>{rollNo.toUpperCase().slice(1,3)}</div> */}
                 <div>{resultantInfo.name}</div>
                 <div>{selectedRooms[0].hostelNo}</div>
                 <div>Double</div>
@@ -255,7 +271,8 @@ const RoomRequestComp = () =>{
               </div>
             <DynamicDivs num={nums} />
             </div>
-            <button className={styles.export_data}>
+            <button className={styles.export_data} onClick={proceedToast}
+            style={{ cursor: 'pointer' }}>
               Proceed
               <svg
                 xmlns="http://www.w3.org/2000/svg"

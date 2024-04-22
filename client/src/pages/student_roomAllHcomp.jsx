@@ -1,9 +1,15 @@
 // HostelComponent.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const StudentRoomComp = ({ hostelNo }) => {
   const [occupancy, setOccupancy] = useState(0);
+
+  const showToast = () => {
+    toast.warning("Coming Soon");  
+   };
 
   useEffect(() => {
     const fetchOccupancy = async () => {
@@ -76,6 +82,9 @@ const dashOffset = 314 - (occupancy / 100) * 314;
               </div>
             </div>
           </div>
+          <ToastContainer
+        position="bottom-left"
+        theme="dark"/>
         </div>
   );
 };

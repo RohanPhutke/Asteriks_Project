@@ -6,9 +6,14 @@ import loginBg from "../img/login-bg.png";
 //add Loginstyle.scss
 
 import styles from "../styles/Loginstyle.module.scss";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const Login_Student = () => {
-
+     
+   const showToast = () => {
+      toast.warning("Coming Soon");  
+     };
 
    const [inputs, setInputs] = useState({
       email: "",
@@ -82,7 +87,9 @@ const Login_Student = () => {
 
             </form>
          </div>
-
+         <ToastContainer
+        position="bottom-left"
+        theme="dark"/>
       </div>
    )
 }

@@ -222,82 +222,148 @@ const Adminout = () => {
           Export Data
         </button>
         <div className={styles.occupancy_border}>
-          <div className={styles.notifications}>
+        <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>Piyush Priyadarshi</span>
+            <span style={{ minWidth:'200px' }}>Piyush Priyadarshi</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>Rohan Phutke</span>
+            <span style={{ minWidth:'200px' }}>Rohan Phutke</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>Avanish Gurjar</span>
+            <span style={{ minWidth:'200px' }}>Avanish Gurjar</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>Aman Raj</span>
+            <span style={{ minWidth:'200px' }}>Aman Raj</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>Anand Raj</span>
+            <span style={{ minWidth:'200px' }}>Anand Raj</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>Saurav Gitte</span>
+            <span style={{ minWidth:'200px' }}>Saurav Gitte</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>xyz</span>
+            <span style={{ minWidth:'200px' }}>xyz</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>xyz</span>
+            <span style={{ minWidth:'200px' }}>xyz</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>xyz</span>
+            <span style={{ minWidth:'200px' }}>xyz</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>xyz</span>
+            <span style={{ minWidth:'200px' }}>xyz</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
           <div className={styles.notifications}>
             <img
               src={logo}
               alt="IIITA"
             />
-            <span>xyz</span>
+            <span style={{ minWidth:'200px' }}>xyz</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>12:30</span>
+            <i class="fa-solid fa-bed" style={{ color: "white" }}></i>
+            <span>Room : 101</span>
+            <i class="fa-solid fa-hotel" style={{ color: '#f3f030' }}></i>
+            <span>Hostel : BH1</span>
           </div>
         </div>
       </div>

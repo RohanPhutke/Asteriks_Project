@@ -386,3 +386,23 @@ html, body{
 button:hover{
   cursor: pointer;
 }
+
+.Notification_box{
+  height: 600px;
+  width: 500px;
+  background-color: #2e2d2d;
+  position: absolute;
+  top: 70px;
+  right: 1px;
+  border-radius: 10px;
+}
+
+.Notification_box_header{
+  border-color: #ffffff;
+  border-bottom: 2px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  display: flex;
+  align-items: left;
+}

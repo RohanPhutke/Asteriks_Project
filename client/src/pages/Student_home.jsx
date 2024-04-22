@@ -105,7 +105,7 @@ const Studenthome = () => {
             </svg>
             Dashboard
           </a>
-          <a href="Roomallocation">
+          <a href="/Roomallocation">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={25}
@@ -118,7 +118,7 @@ const Studenthome = () => {
             </svg>
             Rooms
           </a>
-          <a href="index3.html">
+          <a href="/Attendance">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={25}

@@ -1,34 +1,78 @@
 import React, { useState, useEffect } from "react";
-import logo from "../Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
-import styles from "../../styles/Student_room_all.module.css"
-import StudentRoomComp from "./Student_room_all_Hcomp";
-import { ToastContainer, toast } from 'react-toastify';
+import logo from "./Indian_Institute_of_Information_Technology,_Allahabad_Logo.png";
+import styles from "../styles/Attendance_style.module.css"
+import axios from "axios";
+import { ToastContainer, collapseToast, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-const Studentroomall = () => {
+
+const Attendance = () => {
+
+  const [resultantInfo, setProgress] = useState({ name: 0, hostelName: 0, RoomNo: 0, imagePath: 0 });//Initial Progress state
+  const [email, setEmail] = useState('');
+
   const showToast = () => {
     toast.warning("Coming Soon");
   };
 
-  return (
+  const proceedToast = () => {
+    toast.success("Request Sent Successfully");
+  };
 
+  useEffect(() => {
+    const storedEmail = localStorage.getItem('loggedInEmail');
+    if (storedEmail) {
+      setEmail(storedEmail);
+    }
+
+    const fetchInfo = async () => {
+      try {
+
+        const res_info = await axios.get(`/studenthome?email=${email}`);
+        // console.log(res_info.data);
+        const { studentName, studentHostel, RoomNo, imgPath } = res_info.data;
+        setProgress({ name: studentName, hostelName: studentHostel, RoomNo, imagePath: imgPath });
+        //  console.log(resultantInfo.imagePath);
+      }
+      catch (error) {
+        console.log(`Error fetching student info for ${email}: `, error);
+      }
+    }
+    fetchInfo();
+  })
+
+
+  const storedSelectedRooms = localStorage.getItem('lockedRooms');
+  const selectedRooms = storedSelectedRooms ? JSON.parse(storedSelectedRooms) : [];
+  const nums = selectedRooms.length;
+  var rollNo = localStorage.getItem('loggedInEmail');
+  // rollNo = rollNo.slice(0,rollNo.length - 12);
+
+  const [dateValue, setDateValue] = useState("2024-04-22");
+
+  // Function to handle changing the date value
+  const handleDateChange = (event) => {
+    setDateValue(event.target.value);
+  };
+
+  return (
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <link rel="stylesheet" href="style3.css" />
-      <div className={styles.container0}>
-        <div className={styles.nav_container0}>
+      <div className={styles.container}>
+        <div className={styles.nav_container}>
           <nav>
-            <div className={styles.logo_section0}>
+            <div className={styles.logo_section}>
               <img
                 src={logo}
                 alt="IIITA"
               />
               <span>HMS</span>
             </div>
-            <div className={styles.choices_section0}>
-              <a href="/Home">
+            <div className={styles.choices_section}>
+              <a href="/Studenthome">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -42,11 +86,7 @@ const Studentroomall = () => {
                 Dashboard
               </a>
               <a
-                href="/Studentroomall"
-                style={{
-                  boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
-                  backgroundColor: "black"
-                }}
+                href="/Roomallocation"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +100,11 @@ const Studentroomall = () => {
                 </svg>
                 Rooms
               </a>
-              <a href="/Attendance">
+              <a href="/Attendance"
+              style={{
+                boxShadow: "rgba(63, 229, 255, 0.397) 1px 2px 3px 0px inset",
+                backgroundColor: "black"
+              }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
@@ -97,8 +141,6 @@ const Studentroomall = () => {
                 fill="currentColor"
                 className="bi bi-calendar-check"
                 viewBox="0 0 16 16"
-                onClick={showToast}
-                style={{ cursor: 'pointer' }}
               >
                 <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
@@ -110,8 +152,6 @@ const Studentroomall = () => {
                 fill="currentColor"
                 className="bi bi-person-lines-fill"
                 viewBox="0 0 16 16"
-                onClick={showToast}
-                style={{ cursor: 'pointer' }}
               >
                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
               </svg>
@@ -122,8 +162,6 @@ const Studentroomall = () => {
                 fill="currentColor"
                 className="bi bi-bell-fill"
                 viewBox="0 0 16 16"
-                onClick={showToast}
-                style={{ cursor: 'pointer' }}
               >
                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
               </svg>
@@ -150,9 +188,8 @@ const Studentroomall = () => {
               Profile
             </a>
           </div>
-          <div className={styles.option_2} onClick={showToast}
-            style={{ cursor: 'pointer' }}>
-            <a>
+          <div className={styles.option_2}>
+            <a href="index3.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
@@ -166,9 +203,8 @@ const Studentroomall = () => {
               Occupancy
             </a>
           </div>
-          <div className={styles.option_3} onClick={showToast}
-            style={{ cursor: 'pointer' }}>
-            <a>
+          <div className={styles.option_3}>
+            <a href="/Roomallocation">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
@@ -183,7 +219,6 @@ const Studentroomall = () => {
             </a>
           </div>
           <div className={styles.option_4}>
-
             <a href="id4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,44 +232,82 @@ const Studentroomall = () => {
                 <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
               </svg>
               Assigned
-
             </a>
           </div>
         </div>
-        <div className="filter">
-          <form className={styles.searchform}>
-            <input type="text" placeholder="Are you searching for a vacant room?" />
-            <button type="submit">Search</button>
-          </form>
-        </div>
-        <div className={styles.occupancys}>
-          <span>
-            Hostel Updates
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={16}
-              height={16}
-              fill="currentColor"
-              className="bi bi-arrow-up-right-square-fill"
-              viewBox="0 0 16 16"
-            >
-            </svg>
-          </span>
-          <div className={styles.occupancys_border}>
-            <div className={styles.leftalien}>
-              <StudentRoomComp hostelNo={1} />
-              <StudentRoomComp hostelNo={2} />
-              <StudentRoomComp hostelNo={3} />
-              <StudentRoomComp hostelNo={4} />
-              <StudentRoomComp hostelNo={5} />
+        <div className={styles.occupancy}>
+          <div className="auth">
+            <div class={styles.login} >
+
+              <form action="" class={styles.login__form}>
+                <div className={styles.current}> Current </div>
+                <div className={styles.occupancy}>
+                  <div className={styles.notifications_heading}>
+                    <div>
+                      <span>Place</span>
+                    </div>
+                    <div>
+                      <span>reason</span>
+                    </div>
+                    <div>
+                      <span>In Date</span>
+                    </div>
+                    <div>
+                      <span>Out Date</span>
+                    </div>
+                    <div>
+                      <button>+</button>
+                    </div>
+                  </div>
+                  <div className={styles.occupancy_border}>
+                    <div key={1} className={styles.notifications}>
+                      <div><input className={styles.inputBox} placeholder="Place" /></div>
+                      <div><input className={styles.inputBox} placeholder="Reason" /></div>
+                      <div><label for="start"></label>
+                      <input type="date" className={styles.inputBox}/></div>
+                      <div><input type="date" className={styles.inputBox}/></div>
+                      <div>
+                      <input type="checkbox" className={styles.checkBox} id="check" value="check" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form action="" class={styles.login__form}>
+                <div className={styles.current}> Past </div>
+                <div className={styles.occupancy}>
+                  <div className={styles.notifications_heading}>
+                    <div>
+                      <span>Place</span>
+                    </div>
+                    <div>
+                      <span>Reason</span>
+                    </div>
+                    <div>
+                      <span>In Date</span>
+                    </div>
+                    <div>
+                      <span>Out Date</span>
+                    </div>
+                  </div>
+                  <div className={styles.occupancy_border}>
+                    <div key={1} className={styles.notification}>
+                      <div><span>Home</span></div>
+                      <div><span>Summer</span></div>
+                      <div><input type="date" className={styles.inputBox}/></div>
+                      <div>
+                        <input type="date" className={styles.inputBox}/></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </>
 
-
   )
 }
 
-export default Studentroomall
+export default Attendance;

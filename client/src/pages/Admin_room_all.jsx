@@ -105,7 +105,7 @@ const RoomAllocation = () => {
                 </svg>
                 Rooms
               </a>
-              <a className={styles.a} href="/abc">
+              <a className={styles.a} href="/Attendance">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={25}
